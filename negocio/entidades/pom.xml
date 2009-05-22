@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <parent>
+     <groupId>ar.com.futbolprode.negocio</groupId>
+  <artifactId>futbol-prode-negocio-parent</artifactId>
+      <version>0-SNAPSHOT</version>
+   </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>futbol-prode-negocio-entities</artifactId>
+  <groupId>ar.com.futbolprode.negocio.entidades</groupId>
+  <name>.:Futbol Prode::Negocio::Entidades:.</name>
+  <dependencies>
+ 	<dependency>
+    	<artifactId>excle-commons-audit</artifactId>
+          <groupId>ar.com.excle.commons.audit</groupId>
+          <version>1.0-SNAPSHOT</version>
+  	</dependency>    
+   <!--  base entitiy  <dependency> 
+	    <groupId>ar.com.zauber.commons.repository.impl</groupId>
+	    <artifactId>commons-repository-impl-springhbm</artifactId>
+	    <version>${commons.version}</version>
+   </dependency>-->
+    
+   <dependency>
+       <artifactId>commons-validator</artifactId>
+       <groupId>commons-validator</groupId>
+   </dependency>   
+    <dependency>
+        <artifactId>commons-lang</artifactId>
+        <groupId>commons-lang</groupId>
+    </dependency>
+    <dependency>
+        <artifactId>spring-test</artifactId>
+        <groupId>org.springframework</groupId>
+        <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
