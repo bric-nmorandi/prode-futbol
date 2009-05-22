@@ -77,8 +77,9 @@
 	
 	<!--Distintos modulos o paquetes commons-->
 	<modules>
+
+           <module>negocio</module>
 	<!--
-           <module>audit</module>
 	     <module>hibernate</module>
 	     <module>test</module>
 	     <module>web</module>
