@@ -35,7 +35,8 @@ public class ClubDaoImpl  extends HibernateDaoSupport  implements ClubDao {
 	 */
 	@Override
 	public Club getById(Integer id) {
-		return this.getHibernateTemplate().load(Club.class, id);
+		return (Club)this.getHibernateTemplate().load(Club.class, id);
+		
 	}
 
 	/*
