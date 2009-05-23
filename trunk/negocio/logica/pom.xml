@@ -8,9 +8,18 @@
   <artifactId>futbol-prode-negocio-logica</artifactId>
   <groupId>ar.com.futbolprode.negocio.logica</groupId>
   <name>.:Futbol Prode::Negocio::Logica:.</name>
-  <packaging>jar</packaging> 
+  <packaging>jar</packaging>
   <dependencies>
-    
+    	<dependency>
+    		<artifactId>futbol-prode-negocio-entidades</artifactId>
+    		<groupId>ar.com.futbolprode.negocio.entidades</groupId>
+    		<version>0-SNAPSHOT</version>
+    	</dependency>
+      	<dependency>
+    		<artifactId>futbol-prode-negocio-entidades</artifactId>
+    		<groupId>ar.com.futbolprode.negocio.entidades</groupId>
+    		<version>0-SNAPSHOT</version>
+    	</dependency>
         <dependency>
            <groupId>com.oracle</groupId>
            <artifactId>ojdbc14</artifactId>
@@ -26,7 +35,56 @@
            <artifactId>ojdbc14</artifactId>
            <version>10.2.0.3.0</version>
         </dependency>
-  </dependencies>
+  
+      <dependency>
+        <artifactId>spring-context</artifactId>
+        <groupId>org.springframework</groupId>
+        <version>${spring.version}</version>
+        <scope>runtime</scope>
+    </dependency>
+    <dependency>
+        <artifactId>spring-core</artifactId>
+        <groupId>org.springframework</groupId>
+        <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+        <artifactId>spring-orm</artifactId>
+        <groupId>org.springframework</groupId>
+        <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+        <artifactId>spring-jdbc</artifactId>
+        <groupId>org.springframework</groupId>
+        <version>${spring.version}</version>
+    </dependency>
+        <dependency>
+        <artifactId>spring-test</artifactId>
+        <groupId>org.springframework</groupId>
+        <version>${spring.version}</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+	    <groupId>org.springframework.security</groupId>
+	    <artifactId>spring-security-core-tiger</artifactId>
+	    <version>${spring.security.version}</version>
+    </dependency>
+    <dependency>
+    	<groupId>xstream</groupId>
+    	<artifactId>xstream</artifactId>
+    	<version>${xstream.version}</version>
+    </dependency>
+    <dependency>
+         <groupId>net.sf.ehcache</groupId>
+         <artifactId>ehcache</artifactId>
+         <version>${ehcache.version}</version>
+    </dependency>  
+    <dependency>  
+        <groupId>org.springframework</groupId>  
+        <artifactId>spring</artifactId>
+        <version>${spring.version}</version>
+     </dependency>
+    </dependencies>
+  
 
 
 </project>
