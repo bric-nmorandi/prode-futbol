@@ -3,16 +3,14 @@
  */
 package ar.com.futbolprode.negocio.entidades.modelo;
 
+import ar.com.futbolprode.commons.auditor.Auditor;
+
 /**
  * @author acabrera
  * 
  */
-public class Club {
+public class Club extends Auditor {
 
-	/**
-	 * identificador unico del club
-	 */
-	private Integer id;
 	/**
 	 * nombre del club
 	 */
@@ -21,12 +19,7 @@ public class Club {
 	 * descripcion del club
 	 */
 	private String descripcion;
-	public Integer getId() {
-		return id;
-	}
-	public void setId(Integer id) {
-		this.id = id;
-	}
+
 	public String getNombre() {
 		return nombre;
 	}
