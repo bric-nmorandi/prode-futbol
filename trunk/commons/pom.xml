@@ -13,6 +13,7 @@
 
   <modules>
 	<module>auditor</module>
+	<module>hibernate</module>
   </modules>
   
   <dependencies>
