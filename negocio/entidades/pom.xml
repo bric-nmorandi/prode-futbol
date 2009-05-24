@@ -10,7 +10,11 @@
   <name>.:Futbol Prode::Negocio::Entidades:.</name>
   <packaging>jar</packaging> 
   <dependencies>
-   
+     	<dependency>
+    		<artifactId>futbol-prode-commons-auditor</artifactId>
+    		<groupId>ar.com.futbolprode.commons.auditor</groupId>
+    		<version>0-SNAPSHOT</version>
+    	</dependency>  
  
   </dependencies>
 </project>

@@ -3,6 +3,10 @@
 	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping package="ar.com.futbolprode.negocio.entidades.modelo">
-  <class name="Club">
+  <class name="Club" table="CLUB" lazy="false" >
+  	<id access="field" column="club_id" name="id" type="integer">
+  		<generator class="increment" />
+  	</id>
+  	<property name="nombre" column="NOMBRE" access="field" type="string"></property>
   </class>
 </hibernate-mapping>

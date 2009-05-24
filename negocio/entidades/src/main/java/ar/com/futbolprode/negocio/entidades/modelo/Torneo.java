@@ -6,15 +6,13 @@ package ar.com.futbolprode.negocio.entidades.modelo;
 import java.util.ArrayList;
 import java.util.List;
 
+import ar.com.futbolprode.commons.auditor.Auditor;
+
 /**
  * @author acabrera
  * 
  */
-public class Torneo {
-	/**
-	 * identificador unico del torneo
-	 */
-	private Integer id;
+public class Torneo extends Auditor {
 	/**
 	 * nombre del torneo
 	 */
@@ -23,14 +21,6 @@ public class Torneo {
 	 * lista de los clubese que participan en el torneo
 	 */
 	private List<Club> clubes;
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
 
 	public String getNombre() {
 		return nombre;
