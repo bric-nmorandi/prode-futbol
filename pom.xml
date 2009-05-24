@@ -7,8 +7,8 @@
 	<version>0-SNAPSHOT</version>
 	<name>.:Futbol Prode::Parent:.</name>
 	<organization>
-		<name>QuimicaSalta</name>
-		<url>www.quimicasalta.com.ar</url>
+		<name>futbolProde</name>
+		<url>www.futbolprode.com.ar</url>
 	</organization>	
 	<repositories>
 	  <!--repository>
@@ -77,15 +77,9 @@
 	
 	<!--Distintos modulos o paquetes commons-->
 	<modules>
-
+           <module>commons</module>
            <module>negocio</module>
-	<!--
-	     <module>hibernate</module>
-	     <module>test</module>
-	     <module>web</module>
-	     <module>password</module>
-	-->
-  </modules>   
+        </modules>   
 
 	<dependencies>
 		<dependency>
