@@ -6,7 +6,7 @@
 	<bean id="prodeTransactionProxy"
 		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean"
 		abstract="true">
-		<property name="transactionManager" ref="prodeServerTransactionManager" />
+		<property name="transactionManager" ref="prodeTransactionManager" />
 		<property name="transactionAttributes">
 			<props>
 				<prop key="*">PROPAGATION_REQUIRED</prop>
@@ -20,14 +20,7 @@
         <property name="sessionFactory" ref="sessionFactory" />
     </bean>    
 	
-	<!-- JBOSS JTA 
-	<bean id="sumatServerTransactionManager"
-		class="org.springframework.transaction.jta.JtaTransactionManager">
-		<property name="transactionManagerName" value="java:/TransactionManager"></property>
-		<property name="userTransactionName" value="UserTransaction"></property>
-	</bean>
-	-->
-	
+
 	<bean id="prodeTransactionTemplate"
 		class="org.springframework.transaction.support.TransactionTemplate">
 		<constructor-arg index="0" ref="prodeTransactionManager" />
@@ -42,19 +35,7 @@
 		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
 		<property name="hibernateProperties">
             <props>
-                <!-- oracle-->  
-                <!--  prop key="hibernate.dialect">org.hibernate.dialect.Oracle9Dialect</prop-->
-                <!-- 
-                <prop key="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</prop>
-                
-                <prop key="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</prop>
-                <prop key="hibernate.connection.url">jdbc:oracle:thin:@127.0.0.1:1521:XE</prop>
-                <prop key="hibernate.connection.username">sumat</prop>
-                <prop key="hibernate.connection.password">desarrollo</prop>
-                <prop key="hibernate.hbm2ddl.auto">false</prop>
-                <prop key="hibernate.show_sql">true</prop>
-                 -->
-
+ 
                 <!-- Postgres -->
 
                 <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
@@ -62,7 +43,7 @@
                 <prop key="hibernate.connection.url">jdbc:postgresql://localhost:5432/prode</prop>
                 <prop key="hibernate.connection.username">prode</prop>
                 <prop key="hibernate.connection.password">desarrollo</prop>
-                <prop key="hibernate.hbm2ddl.auto">false</prop>
+                <prop key="hibernate.hbm2ddl.auto">create</prop>
                 <prop key="hibernate.show_sql">true</prop>
                 <prop key="hibernate.connection.pool_size">5</prop>
                 <prop key="hibernate.jdbc.batch_size">0</prop>
@@ -76,41 +57,11 @@
 				<value>ar/com/futbolprode/negocio/logica/mapping/Torneo.hbm.xml</value>		
 			</list>
 		</property>
-		<!-- property name="entityInterceptor" ref="auditInterceptor" /-->
-        <property name="entityInterceptor">
-            <bean class="ar.com.zauber.commons.repository.utils.HibernateAuditLoggerInterceptor">
-                <property name="authenticationUserMapper" ref="userMapper"/>
-            </bean>
-        </property>
+        <property name="entityInterceptor"  ref="auditInterceptor"/>            
+        <property name="lobHandler" ref="defaultLobHandler"/>       
 	</bean> 
+	<bean id="auditInterceptor" class="ar.com.futbolprode.commons.hibernate.interceptor.AuditInterceptor" />
+	 <bean id="defaultLobHandler" class="org.springframework.jdbc.support.lob.DefaultLobHandler" />
 	
-	<!-- DATA SOURCE 2 -->
-	<!--  
-	<bean id="sumatServerHibernateTemplate2" class="org.springframework.orm.hibernate3.HibernateTemplate">
-        <property name="sessionFactory" ref="sessionFactory2"/>
-    </bean>	
-	<bean id="sessionFactory2"
-		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
-		<property name="hibernateProperties">
-            <props>
-                <prop key="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</prop>
-                <prop key="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</prop>
-                <prop key="hibernate.connection.url">jdbc:oracle:thin:@127.0.0.1:1521:XE</prop>
-                <prop key="hibernate.connection.username">SUMAT</prop>
-                <prop key="hibernate.connection.password">DESARROLLO</prop>
-                <prop key="hibernate.show_sql">true</prop>
-            </props>
-        </property>
-		<property name="mappingResources">
-			<list>
-				<value>ve/gob/libertador/sumat/pda/business/logic/mapping/TestJta.hbm.xml</value>								
-			</list>
-		</property>
-        <property name="entityInterceptor">
-            <bean class="ar.com.zauber.commons.repository.utils.HibernateAuditLoggerInterceptor">
-                <property name="authenticationUserMapper" ref="userMapper"/>
-            </bean>
-        </property>
-	</bean> 
-	-->
+
 </beans>
