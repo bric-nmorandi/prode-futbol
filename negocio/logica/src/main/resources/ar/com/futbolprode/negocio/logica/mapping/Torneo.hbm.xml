@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="ar.com.futbolprode.negocio.entidades.modelo">
+  <class name="Torneo" table="torneo" lazy="false" >
+  	<id name="id" column="torneo_id" access="field" type="integer">
+  		<generator class="increment" />
+  	</id>
+  	<property name="nombre" type="string" access="field" column="nombre" />
+  </class>
+</hibernate-mapping>
