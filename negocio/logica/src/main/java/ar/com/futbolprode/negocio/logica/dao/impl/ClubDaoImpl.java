@@ -8,7 +8,7 @@ import java.util.List;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
 
-import ar.com.futbolprode.negocio.entidades.modelo.Club;
+import ar.com.futbolprode.negocio.entidades.modelo.club.Club;
 import ar.com.futbolprode.negocio.logica.dao.ClubDao;
 
 /**

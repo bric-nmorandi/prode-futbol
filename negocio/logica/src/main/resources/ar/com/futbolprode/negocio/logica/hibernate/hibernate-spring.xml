@@ -43,7 +43,7 @@
                 <prop key="hibernate.connection.url">jdbc:postgresql://localhost:5432/prode</prop>
                 <prop key="hibernate.connection.username">prode</prop>
                 <prop key="hibernate.connection.password">desarrollo</prop>
-                <prop key="hibernate.hbm2ddl.auto">create</prop>
+                <prop key="hibernate.hbm2ddl.auto">false</prop>
                 <prop key="hibernate.show_sql">true</prop>
                 <prop key="hibernate.connection.pool_size">5</prop>
                 <prop key="hibernate.jdbc.batch_size">0</prop>

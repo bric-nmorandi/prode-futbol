@@ -10,4 +10,7 @@
        <bean id="torneoDao" class="ar.com.futbolprode.negocio.logica.dao.impl.TorneoDaoImpl" >                                   
               <property name="hibernateTemplate" ref="prodeHibernateTemplate"/>
        </bean>
+       <bean id="clubDao" class="ar.com.futbolprode.negocio.logica.dao.impl.ClubDaoImpl" >                                   
+              <property name="hibernateTemplate" ref="prodeHibernateTemplate"/>
+       </bean>
 </beans>

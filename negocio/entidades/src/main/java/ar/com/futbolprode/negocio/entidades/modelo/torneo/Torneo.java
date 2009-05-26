@@ -1,7 +1,7 @@
 /**
  * 
  */
-package ar.com.futbolprode.negocio.entidades.modelo;
+package ar.com.futbolprode.negocio.entidades.modelo.torneo;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -14,4 +14,11 @@
 	       		</bean>
 	       	</property>
        </bean>
+       <bean id="clubService" parent="prodeTransactionProxy">
+			<property name="target"> 
+				<bean class="ar.com.futbolprode.negocio.logica.service.impl.ClubServiceImpl">
+	       		<property name="clubDao" ref="clubDao" />
+	       		</bean>
+	       	</property>
+       </bean>
 </beans>
