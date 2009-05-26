@@ -5,7 +5,7 @@ package ar.com.futbolprode.negocio.logica.dao;
 
 import java.util.List;
 
-import ar.com.futbolprode.negocio.entidades.modelo.Club;
+import ar.com.futbolprode.negocio.entidades.modelo.club.Club;
 
 /**
  * @author acabrera

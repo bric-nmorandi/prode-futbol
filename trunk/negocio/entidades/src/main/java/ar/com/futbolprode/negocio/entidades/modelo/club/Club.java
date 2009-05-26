@@ -1,7 +1,7 @@
 /**
  * 
  */
-package ar.com.futbolprode.negocio.entidades.modelo;
+package ar.com.futbolprode.negocio.entidades.modelo.club;
 
 import ar.com.futbolprode.commons.auditor.Auditor;
 

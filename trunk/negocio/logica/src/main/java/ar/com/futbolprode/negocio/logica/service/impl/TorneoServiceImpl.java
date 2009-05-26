@@ -5,7 +5,7 @@ package ar.com.futbolprode.negocio.logica.service.impl;
 
 import java.util.List;
 
-import ar.com.futbolprode.negocio.entidades.modelo.Torneo;
+import ar.com.futbolprode.negocio.entidades.modelo.torneo.Torneo;
 import ar.com.futbolprode.negocio.logica.dao.TorneoDao;
 import ar.com.futbolprode.negocio.logica.service.TorneoService;
 
