@@ -3,6 +3,8 @@
  */
 package ar.com.futbolprode.commons.imagen.dao.impl;
 
+import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
+
 import ar.com.futbolprode.commons.imagen.api.Imagen;
 import ar.com.futbolprode.commons.imagen.dao.ImagenDao;
 
@@ -10,7 +12,7 @@ import ar.com.futbolprode.commons.imagen.dao.ImagenDao;
  * @author acabrera
  * 
  */
-public class ImagenDaoImpl implements ImagenDao {
+public class ImagenDaoImpl extends HibernateDaoSupport implements ImagenDao {
 
 	/*
 	 * (non-Javadoc)
@@ -21,8 +23,7 @@ public class ImagenDaoImpl implements ImagenDao {
 	 */
 	@Override
 	public Imagen getById(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		return (Imagen) this.getHibernateTemplate().load(Imagen.class, id);
 	}
 
 	/*
@@ -34,7 +35,11 @@ public class ImagenDaoImpl implements ImagenDao {
 	 */
 	@Override
 	public void save(Imagen imagen) {
-		// TODO Auto-generated method stub
+		if (imagen.getId() == null) {
+			this.getHibernateTemplate().save(imagen);
+		} else {
+			this.getHibernateTemplate().saveOrUpdate(imagen);
+		}
 
 	}
 
