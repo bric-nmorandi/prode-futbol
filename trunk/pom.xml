@@ -12,11 +12,7 @@
 	</organization>	
 	<repositories>
 	  <!--repository>
-            <id>zauber-code-releases</id>
-            <name>Zauber code</name>
-            <url>https://repo1.zauber.com.ar/zauber/code/releases</url>
-            <releases><enabled>true</enabled></releases>
-            <snapshots><enabled>false</enabled></snapshots>
+
 	  </repository-->
       <repository> <!-- para faces -->
 	        <id>jboss-repo</id>
@@ -36,12 +32,7 @@
       </repository> 
 	</repositories>
     <!-- Nuestro Repositorio -->
-	<!--
-	<scm>
-	    <connection>scm:svn:https://svn.ex-cle.com:1443/ex-cle/Desarrollo/trunk/cne2</connection>
-	    <developerConnection>scm:svn:https://svn.ex-cle.com:1443/ex-cle/Desarrollo/trunk/cne2</developerConnection>
-	    <url>https://svn.ex-cle.com:1443/excle/Desarrollo/trunk/cne2/</url>
-    </scm>-->
+
 
 
 	<properties>
@@ -93,20 +84,10 @@
   
   <distributionManagement>
     <site>
-      <id>ex-cle-site</id>
-      <name>Sitio de Ex-cle</name>
-      <url>file:///tmp/ex-cle-site</url>
+      <id>prode-futbol-site</id>
+      <name>Sitio de FutbolProde</name>
+      <url>file:///tmp/prode-futbol-site</url>
     </site>
-    <!--repository>
-        <id>maypun-cne-releases</id>
-        <name>Maypun CNE Releases</name>
-        <url>https://repo1.zauber.com.ar/maypun/cne/releases</url>
-    </repository>
-    <snapshotRepository>
-        <id>maypun-cne-snapshots</id>
-        <name>Maypun CNE Snapshots</name>
-        <url>https://repo1.zauber.com.ar/maypun/cne/snapshots</url>
-    </snapshotRepository-->
   </distributionManagement>
 
 	<!--Creacion del javadoc con maven -->	
