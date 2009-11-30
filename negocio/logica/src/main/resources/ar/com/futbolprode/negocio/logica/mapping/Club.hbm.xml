@@ -9,6 +9,12 @@
   	</id>
   	<property name="nombre" column="nombre" access="field" type="string" />
   	<property name="descripcion" column="descripcion" access="field" type="string" />
-  	<property name="fechaCreacion" column="fecha_creacion" access="field" type="date" />  	
+  	<property name="fechaCreacion" column="fecha_creacion" access="field" type="date" />
+  	<many-to-one name="estadoClub" class="EstadoClub" column="estado_club_id" access="field"/>
+  	<set name="torneosClub" access="field" lazy="false" >
+  		<key column="club_id" />
+  			<one-to-many class="ar.com.futbolprode.negocio.entidades.modelo.torneo.TorneoClub" />
+  	</set>
+  	<many-to-one name="liga" class="ar.com.futbolprode.negocio.entidades.modelo.liga.Liga" access="field" column="liga_id"/>  	
   </class>
 </hibernate-mapping>

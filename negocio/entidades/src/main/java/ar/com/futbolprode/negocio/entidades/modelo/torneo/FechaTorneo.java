@@ -25,6 +25,8 @@ public class FechaTorneo extends Auditor {
 	 */
 	private Set<PartidoFecha> partidos;
 
+	private Torneo torneo;
+	
 	public Date getFechaDelTorneo() {
 		return fechaDelTorneo;
 	}
@@ -76,5 +78,13 @@ public class FechaTorneo extends Auditor {
 				resultado++;
 		}
 		return resultado;
+	}
+
+	public Torneo getTorneo() {
+		return torneo;
+	}
+
+	public void setTorneo(Torneo torneo) {
+		this.torneo = torneo;
 	}
 }

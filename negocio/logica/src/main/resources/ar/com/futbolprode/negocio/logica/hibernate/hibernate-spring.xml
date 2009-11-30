@@ -55,6 +55,13 @@
 				<!-- value>classpath:hbm</value-->
 				<value>ar/com/futbolprode/negocio/logica/mapping/Club.hbm.xml</value>								
 				<value>ar/com/futbolprode/negocio/logica/mapping/Torneo.hbm.xml</value>		
+				<value>ar/com/futbolprode/negocio/logica/mapping/TorneoClub.hbm.xml</value>
+				<value>ar/com/futbolprode/negocio/logica/mapping/EstadoClub.hbm.xml</value>
+				<value>ar/com/futbolprode/negocio/logica/mapping/EstadoTorneo.hbm.xml</value>
+				<value>ar/com/futbolprode/negocio/logica/mapping/FechaTorneo.hbm.xml</value>
+				<value>ar/com/futbolprode/negocio/logica/mapping/PartidoFecha.hbm.xml</value>
+				<value>ar/com/futbolprode/negocio/logica/mapping/Resultado.hbm.xml</value>
+				<value>ar/com/futbolprode/negocio/logica/mapping/Liga.hbm.xml</value>
 			</list>
 		</property>
         <property name="entityInterceptor"  ref="auditInterceptor"/>            

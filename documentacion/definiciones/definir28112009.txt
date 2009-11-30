@@ -1,0 +1,13 @@
+Definir 28 Nov,2009
+-------
+Definir seguridad, por ldap o propiamente agrupada en la base de datos.
+Definir dos war: Administrador y otro Jugador o el mismo con diferentes login (posible sobrecarga).
+Definir si es con ldap como se maneja la relación con la jugada de cada semana.
+Definir modulo estadísticas:Mas adelante.
+Definir modulo foro:Mas adelante.
+Definir Modulos:
+1- Seguimiento de torneo(abm de club, torneo, liga,etc...)
+2- Prode propiamente dicho(administracion de usuarios y jugadas, etc...)
+3- Estadisticas prode
+4- foro: posible integracion con opensources de internet o desarrollo de uno propio.
+5-  

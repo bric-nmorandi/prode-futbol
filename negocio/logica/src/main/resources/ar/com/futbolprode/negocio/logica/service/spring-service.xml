@@ -1,24 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
 	xsi:schemaLocation="
        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd    
        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
-       
-   	   <import resource="classpath:ar/com/futbolprode/negocio/logica/dao/spring-dao.xml"/>
-   	   <bean id="torneoService" parent="prodeTransactionProxy">
-			<property name="target"> 
-				<bean class="ar.com.futbolprode.negocio.logica.service.impl.TorneoServiceImpl">
-	       		<property name="torneoDao" ref="torneoDao" />
-	       		</bean>
-	       	</property>
-       </bean>
-       <bean id="clubService" parent="prodeTransactionProxy">
-			<property name="target"> 
-				<bean class="ar.com.futbolprode.negocio.logica.service.impl.ClubServiceImpl">
-	       		<property name="clubDao" ref="clubDao" />
-	       		</bean>
-	       	</property>
-       </bean>
+
+	<import
+		resource="classpath:ar/com/futbolprode/negocio/logica/dao/spring-dao.xml" />
+	<bean id="torneoService" parent="prodeTransactionProxy">
+		<property name="target">
+			<bean
+				class="ar.com.futbolprode.negocio.logica.service.impl.TorneoServiceImpl">
+				<property name="torneoDao" ref="torneoDao" />
+			</bean>
+		</property>
+	</bean>
+	<bean id="clubService" parent="prodeTransactionProxy">
+		<property name="target">
+			<bean
+				class="ar.com.futbolprode.negocio.logica.service.impl.ClubServiceImpl">
+				<property name="clubDao" ref="clubDao" />
+			</bean>
+		</property>
+	</bean>
+	<bean id="torneoClubService" parent="prodeTransactionProxy">
+		<property name="target">
+			<bean
+				class="ar.com.futbolprode.negocio.logica.service.impl.TorneoClubServiceImpl">
+				<property name="torneoClubDao" ref="torneoClubDao" />
+			</bean>
+		</property>
+	</bean>
+	<bean id="estadoClubService" parent="prodeTransactionProxy">
+		<property name="target">
+			<bean
+				class="ar.com.futbolprode.negocio.logica.service.impl.EstadoClubServiceImpl">
+				<property name="estadoClubDao" ref="estadoClubDao" />
+			</bean>
+		</property>
+	</bean>
+	<bean id="estadoTorneoService" parent="prodeTransactionProxy">
+		<property name="target">
+			<bean
+				class="ar.com.futbolprode.negocio.logica.service.impl.EstadoTorneoServiceImpl">
+				<property name="estadoTorneoDao" ref="estadoTorneoDao" />
+			</bean>
+		</property>
+	</bean>
+	<bean id="fechaTorneoService" parent="prodeTransactionProxy">
+		<property name="target">
+			<bean
+				class="ar.com.futbolprode.negocio.logica.service.impl.FechaTorneoServiceImpl">
+				<property name="fechaTorneoDao" ref="fechaTorneoDao" />
+			</bean>
+		</property>
+	</bean>
+	<bean id="partidoFechaService" parent="prodeTransactionProxy">
+		<property name="target">
+			<bean
+				class="ar.com.futbolprode.negocio.logica.service.impl.PartidoFechaServiceImpl">
+				<property name="partidoFechaDao" ref="partidoFechaDao" />
+			</bean>
+		</property>
+	</bean>
+	<bean id="resultadoService" parent="prodeTransactionProxy">
+		<property name="target">
+			<bean
+				class="ar.com.futbolprode.negocio.logica.service.impl.ResultadoServiceImpl">
+				<property name="resultadoDao" ref="resultadoDao" />
+			</bean>
+		</property>
+	</bean>	
+	<bean id="ligaService" parent="prodeTransactionProxy">
+		<property name="target">
+			<bean
+				class="ar.com.futbolprode.negocio.logica.service.impl.LigaServiceImpl">
+				<property name="ligaDao" ref="ligaDao" />
+			</bean>
+		</property>
+	</bean>	
 </beans>

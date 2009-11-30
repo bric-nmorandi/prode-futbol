@@ -9,7 +9,7 @@ import ar.com.futbolprode.negocio.entidades.modelo.torneo.EstadoTorneo;
 
 /**
  * @author acabrera
- * 
+ * @since 28 Nov,2009
  */
 public interface EstadoTorneoDao {
 

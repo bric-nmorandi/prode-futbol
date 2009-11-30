@@ -13,6 +13,13 @@ public class EstadoClub extends Auditor {
 
 	private String descripcion;
 
+	public EstadoClub(String descripcion) {
+		this.descripcion=descripcion;
+	}
+	
+	public EstadoClub() {
+		// TODO Auto-generated constructor stub
+	}
 	public String getDescripcion() {
 		return descripcion;
 	}
