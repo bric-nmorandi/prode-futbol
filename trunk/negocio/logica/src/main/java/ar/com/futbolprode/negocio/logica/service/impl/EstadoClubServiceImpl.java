@@ -10,8 +10,12 @@ import ar.com.futbolprode.negocio.logica.dao.EstadoClubDao;
 import ar.com.futbolprode.negocio.logica.service.EstadoClubService;
 
 /**
- * @author acabrera
+ * Implementacion de {@link EstadoClubService}
  * 
+ * @author acabrera
+ * @since 28 Nov,2009
+ * @see EstadoClub
+ * @see EstadoClubDao
  */
 public class EstadoClubServiceImpl implements EstadoClubService {
 
@@ -51,5 +55,14 @@ public class EstadoClubServiceImpl implements EstadoClubService {
 		this.estadoClubDao.save(estadoClub);
 
 	}
+
+	public EstadoClubDao getEstadoClubDao() {
+		return estadoClubDao;
+	}
+
+	public void setEstadoClubDao(EstadoClubDao estadoClubDao) {
+		this.estadoClubDao = estadoClubDao;
+	}
+	
 
 }

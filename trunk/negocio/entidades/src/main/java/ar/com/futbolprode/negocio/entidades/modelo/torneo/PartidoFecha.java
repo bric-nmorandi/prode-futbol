@@ -30,6 +30,10 @@ public class PartidoFecha extends Auditor {
 	 * se define el horario de dicho {@link PartidoFecha}
 	 */
 	private Date horario;
+	/**
+	 * se define a que fecha pertenece el partído.
+	 */
+	private FechaTorneo fechaTorneo;
 	
 	public Club getClubLocal() {
 		return clubLocal;
@@ -61,6 +65,14 @@ public class PartidoFecha extends Auditor {
 
 	public void setHorario(Date horario) {
 		this.horario = horario;
+	}
+
+	public FechaTorneo getFechaTorneo() {
+		return fechaTorneo;
+	}
+
+	public void setFechaTorneo(FechaTorneo fechaTorneo) {
+		this.fechaTorneo = fechaTorneo;
 	}
 	
 }

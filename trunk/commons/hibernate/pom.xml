@@ -20,5 +20,16 @@
 			<groupId>org.springframework</groupId>
 			<version>2.5.4</version>
 		</dependency>
+		<dependency>
+			<artifactId>spring-orm</artifactId>
+			<groupId>org.springframework</groupId>
+			<version>2.5.4</version>
+		</dependency>
+
+		<dependency>
+			<artifactId>futbol-prode-commons-auditor</artifactId>
+			<groupId>ar.com.futbolprode.commons.auditor</groupId>
+			<version>0-SNAPSHOT</version>
+		</dependency>
   </dependencies> 
 </project>

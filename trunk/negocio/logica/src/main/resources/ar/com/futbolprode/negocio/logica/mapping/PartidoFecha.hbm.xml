@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="ar.com.futbolprode.negocio.entidades.modelo.torneo">
+  <class name="PartidoFecha" lazy="false" table="partido_fecha">
+  	<id access="field" column="partido_fecha_id" type="integer" name="id">
+  		<generator class="increment"/>
+  	</id>
+  	<property name="fechaCreacion" access="field" column="fecha_creacion" type="date"/>
+  	<many-to-one name="clubLocal" class="ar.com.futbolprode.negocio.entidades.modelo.club.Club" access="field" column="club_local_id"/>
+  	<many-to-one name="clubVisitante" class="ar.com.futbolprode.negocio.entidades.modelo.club.Club" access="field" column="club_visitante_id"/>
+  	<many-to-one name="resultado" access="field" column="resultado_id" class="Resultado" />
+  	<many-to-one name="fechaTorneo" class="FechaTorneo" column="fecha_torneo_id" access="field" />
+  </class>
+</hibernate-mapping>

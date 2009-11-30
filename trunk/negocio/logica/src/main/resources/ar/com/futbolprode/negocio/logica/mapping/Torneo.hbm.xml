@@ -8,5 +8,11 @@
   		<generator class="increment" />
   	</id>
   	<property name="nombre" type="string" access="field" column="nombre" />
+  	<property name="fechaCreacion" type="date" access="field" column="fecha_creacion" />
+  	<many-to-one name="estadoTorneo" access="field" class="EstadoTorneo" column="estado_torneo_id" />
+  	<set name="torneosClub" access="field" lazy="false" >
+  		<key column="torneo_id" />
+  			<one-to-many class="ar.com.futbolprode.negocio.entidades.modelo.torneo.TorneoClub" />
+  	</set> 
   </class>
 </hibernate-mapping>

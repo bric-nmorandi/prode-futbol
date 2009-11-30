@@ -13,4 +13,26 @@
        <bean id="clubDao" class="ar.com.futbolprode.negocio.logica.dao.impl.ClubDaoImpl" >                                   
               <property name="hibernateTemplate" ref="prodeHibernateTemplate"/>
        </bean>
+       <bean id="torneoClubDao" class="ar.com.futbolprode.negocio.logica.dao.impl.TorneoClubDaoImpl" >                                   
+              <property name="hibernateTemplate" ref="prodeHibernateTemplate"/>
+       </bean>
+       <bean id="estadoClubDao" class="ar.com.futbolprode.negocio.logica.dao.impl.EstadoClubDaoImpl" >                                   
+              <property name="hibernateTemplate" ref="prodeHibernateTemplate"/>
+       </bean>
+       <bean id="estadoTorneoDao" class="ar.com.futbolprode.negocio.logica.dao.impl.EstadoTorneoDaoIml" >                                   
+              <property name="hibernateTemplate" ref="prodeHibernateTemplate"/>
+       </bean>
+       <bean id="fechaTorneoDao" class="ar.com.futbolprode.negocio.logica.dao.impl.FechaTorneoDaoImpl" >                                   
+              <property name="hibernateTemplate" ref="prodeHibernateTemplate"/>
+       </bean>
+       <bean id="partidoFechaDao" class="ar.com.futbolprode.negocio.logica.dao.impl.PartidoFechaDaoImpl" >                                   
+              <property name="hibernateTemplate" ref="prodeHibernateTemplate"/>
+       </bean>
+       <bean id="resultadoDao" class="ar.com.futbolprode.negocio.logica.dao.impl.ResultadoDaoImpl" >                                   
+              <property name="hibernateTemplate" ref="prodeHibernateTemplate"/>
+       </bean>
+       <bean id="ligaDao" class="ar.com.futbolprode.negocio.logica.dao.impl.LigaDaoImpl" >                                   
+              <property name="hibernateTemplate" ref="prodeHibernateTemplate"/>
+       </bean>              
+       
 </beans>

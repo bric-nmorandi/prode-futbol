@@ -10,6 +10,24 @@
 		<name>futbolProde</name>
 		<url>www.futbolprode.com.ar</url>
 	</organization>	
+
+	<distributionManagement>
+	    <repository>
+	      <id>releases</id>
+	      <name>Internal Releases</name>
+	      <url>http://localhost:8080/nexus/content/repositories/releases</url>
+	    </repository>
+	    <snapshotRepository>
+	      <id>snapshots</id>
+	      <name>Internal Snapshots</name>
+	      <url>http://localhost:8080/nexus/content/repositories/snapshots</url>
+	    </snapshotRepository> 
+	    <site>
+	      <id>prode-futbol-site</id>
+	      <name>Sitio de FutbolProde</name>
+	      <url>file:///tmp/prode-futbol-site</url>
+	    </site>
+	</distributionManagement>
 	<repositories>
 	  <!--repository>
 
@@ -82,13 +100,8 @@
 	</dependencies>	
 	
   
-  <distributionManagement>
-    <site>
-      <id>prode-futbol-site</id>
-      <name>Sitio de FutbolProde</name>
-      <url>file:///tmp/prode-futbol-site</url>
-    </site>
-  </distributionManagement>
+
+
 
 	<!--Creacion del javadoc con maven -->	
 	<reporting>
