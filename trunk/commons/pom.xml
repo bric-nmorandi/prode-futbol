@@ -15,6 +15,8 @@
 	<module>auditor</module>
 	<module>hibernate</module>
 	<module>imagen</module>
+	<module>sistema</module>
+	<module>web</module>
   </modules>
   
   <dependencies>
