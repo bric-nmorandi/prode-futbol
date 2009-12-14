@@ -24,9 +24,19 @@ public class FechaTorneo extends Auditor {
 	 * conjunto de todos los partidos de la fecha {@link FechaTorneo}
 	 */
 	private Set<PartidoFecha> partidos;
-
+	/**
+	 * @see Torneo
+	 */
 	private Torneo torneo;
-	
+
+	public FechaTorneo(Date fechaDelTorneo, Torneo torneo) {
+		this.fechaDelTorneo = fechaDelTorneo;
+		this.torneo = torneo;
+	}
+
+	public FechaTorneo() {
+		// TODO Auto-generated constructor stub
+	}
 	public Date getFechaDelTorneo() {
 		return fechaDelTorneo;
 	}
@@ -57,6 +67,7 @@ public class FechaTorneo extends Auditor {
 		}
 		return resultado;
 	}
+
 	/*
 	 * define la cantidad de triunfos visitantes que se dieron en esa fecha
 	 */
@@ -68,6 +79,7 @@ public class FechaTorneo extends Auditor {
 		}
 		return resultado;
 	}
+
 	/*
 	 * define la cantidad de empates que se dieron en esa fecha
 	 */

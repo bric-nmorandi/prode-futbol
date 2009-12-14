@@ -8,7 +8,7 @@ import ar.com.futbolprode.negocio.entidades.modelo.club.Club;
 
 /**
  * @author acabrera
- *
+ * 
  */
 public class TorneoClub extends Auditor {
 
@@ -20,7 +20,16 @@ public class TorneoClub extends Auditor {
 	 * define a que torneo pertenece.
 	 */
 	private Torneo torneo;
-	
+
+	public TorneoClub(Club club, Torneo torneo) {
+		this.club = club;
+		this.torneo = torneo;
+	}
+
+	public TorneoClub() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public Torneo getTorneo() {
 		return torneo;
 	}
@@ -36,5 +45,5 @@ public class TorneoClub extends Auditor {
 	public void setClub(Club club) {
 		this.club = club;
 	}
-	
+
 }

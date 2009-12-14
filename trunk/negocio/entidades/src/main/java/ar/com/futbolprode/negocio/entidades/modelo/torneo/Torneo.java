@@ -24,6 +24,15 @@ public class Torneo extends Auditor {
 
 	private EstadoTorneo estadoTorneo;
 
+	public Torneo(String nombre, EstadoTorneo estadoTorneo) {
+		this.nombre = nombre;
+		this.estadoTorneo = estadoTorneo;
+	}
+
+	public Torneo() {
+		// TODO Auto-generated constructor stub
+	}
+	
 	public String getNombre() {
 		return nombre;
 	}

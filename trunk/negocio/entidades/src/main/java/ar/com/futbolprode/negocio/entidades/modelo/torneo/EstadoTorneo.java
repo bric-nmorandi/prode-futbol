@@ -10,6 +10,8 @@ import ar.com.futbolprode.commons.auditor.Auditor;
  * estados: Activo, Desactivado,
  * 
  * @author acabrera
+ * @since 13 Dic,2009
+ * @see Torneo
  */
 public class EstadoTorneo extends Auditor {
 
@@ -18,6 +20,14 @@ public class EstadoTorneo extends Auditor {
 	 * Desactivado
 	 */
 	protected String descripcion;
+
+	public EstadoTorneo(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	public EstadoTorneo() {
+		// TODO Auto-generated constructor stub
+	}
 
 	public String getDescripcion() {
 		return descripcion;

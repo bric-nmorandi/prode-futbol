@@ -10,7 +10,7 @@ import ar.com.futbolprode.negocio.entidades.modelo.club.Club;
 
 /**
  * @author acabrera
- *
+ * 
  */
 public class PartidoFecha extends Auditor {
 
@@ -18,7 +18,7 @@ public class PartidoFecha extends Auditor {
 	 * Club local en este partido {@link PartidoFecha}
 	 */
 	private Club clubLocal;
-	/** 
+	/**
 	 * club visitante en este partido {@link PartidoFecha}
 	 */
 	private Club clubVisitante;
@@ -34,7 +34,19 @@ public class PartidoFecha extends Auditor {
 	 * se define a que fecha pertenece el partído.
 	 */
 	private FechaTorneo fechaTorneo;
-	
+
+	public PartidoFecha(Club clubLocal, Club clubVisitante,
+			FechaTorneo fechaTorneo, Date horario) {
+		this.clubLocal = clubLocal;
+		this.clubVisitante = clubVisitante;
+		this.fechaTorneo = fechaTorneo;
+		this.horario = horario;
+	}
+
+	public PartidoFecha() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public Club getClubLocal() {
 		return clubLocal;
 	}
@@ -74,5 +86,5 @@ public class PartidoFecha extends Auditor {
 	public void setFechaTorneo(FechaTorneo fechaTorneo) {
 		this.fechaTorneo = fechaTorneo;
 	}
-	
+
 }

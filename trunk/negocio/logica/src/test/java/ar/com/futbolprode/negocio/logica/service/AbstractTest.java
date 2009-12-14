@@ -7,19 +7,37 @@ import org.springframework.test.AbstractDependencyInjectionSpringContextTests;
 
 /**
  * @author acabrera
- * 
+ * @since 13 Dic,2009
  */
 public class AbstractTest extends AbstractDependencyInjectionSpringContextTests {
 
 	protected static final int CERO = 0;
-
+	/**
+	 * 
+	 */
 	private ClubService clubService;
-
+	/**
+	 * 
+	 */
 	private EstadoClubService estadoClubService;
-
+	/**
+	 * 
+	 */
 	private TorneoService torneoService;
-
+	/**
+	 * 
+	 */
+	private EstadoTorneoService estadoTorneoService;
+	/**
+	 * 
+	 */
 	private LigaService ligaService;
+	/**
+	 * 
+	 */
+	private FechaTorneoService fechaTorneoService;
+	
+	
 	@Override
 	protected String[] getConfigLocations() {
 		return new String[] { "classpath:/ar/com/futbolprode/negocio/logica/service/spring-service.xml" };
@@ -60,5 +78,21 @@ public class AbstractTest extends AbstractDependencyInjectionSpringContextTests 
 
 	public void setLigaService(LigaService ligaService) {
 		this.ligaService = ligaService;
+	}
+
+	public EstadoTorneoService getEstadoTorneoService() {
+		return estadoTorneoService;
+	}
+
+	public void setEstadoTorneoService(EstadoTorneoService estadoTorneoService) {
+		this.estadoTorneoService = estadoTorneoService;
+	}
+
+	public FechaTorneoService getFechaTorneoService() {
+		return fechaTorneoService;
+	}
+
+	public void setFechaTorneoService(FechaTorneoService fechaTorneoService) {
+		this.fechaTorneoService = fechaTorneoService;
 	}
 }
