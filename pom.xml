@@ -88,6 +88,7 @@
 	<modules>
            <module>commons</module>
            <module>negocio</module>
+           <module>web</module>
         </modules>   
 
 	<dependencies>
@@ -204,6 +205,16 @@
 	</build>
 	<developers>
 	  	<developer>
+	  			<name>veronica velastiqui</name>
+	  			<id>verov</id>
+	  			<email>veronicavelastiqui@gmail.com</email>
+	  			<organization>Home</organization>
+	  			<roles>
+	  				<role>Developer</role>
+	  			</roles>
+				<timezone>-3</timezone>
+	  	</developer>
+		<developer>
 	  			<name>arturo cabrera</name>
 	  			<id>turo</id>
 	  			<email>turo.cabrera@gmail.com</email>
@@ -213,6 +224,7 @@
 	  			</roles>
 				<timezone>-3</timezone>
 	  	</developer>
+	  
 	  
 
 	  </developers>
