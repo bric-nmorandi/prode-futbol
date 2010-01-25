@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="ar.com.futbolprode.negocio.entidades.modelo.usuario">
+  <class name="Rol" table="rol" lazy="false">
+  	<id access="field" name="id" column="rol_id" type="integer">
+  		<generator class="increment" />
+  	</id>
+  	<property name="nombre" access="field" column="nombre" type="string" />
+  	<property name="fechaCreacion" access="field" column="fecha_creacion" type="date" />
+  	<set name="permisos" access="field" lazy="false" >
+  		<key column="rol_id" />
+  		<one-to-many class="RolPermiso"/>
+  	</set>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="ar.com.futbolprode.negocio.entidades.modelo.usuario">
+  <class name="Usuario" table="usuario" lazy="false">
+  	<id access="field" column="usuario_id" name="id"  type="integer">
+  		<generator class="increment" />
+  	</id>
+  	<property name="login" type="string" column="login" access="field" />
+  	<property name="password" type="string" column="password" access="field" />
+  	<property name="nombre" type="string" column="nombre" access="field" />
+  	<property name="fechaCreacion" type="timestamp" column="fecha_creacion" access="field" />
+  	<property name="fechaModificacion" type="timestamp" column="fecha_modificacion"  access="field" />
+  	<set name="roles" access="field" lazy="false">
+  		<key column="usuario_id" />
+  		<one-to-many class="UsuarioRol"/>
+  	</set>
+  </class>
+</hibernate-mapping>
