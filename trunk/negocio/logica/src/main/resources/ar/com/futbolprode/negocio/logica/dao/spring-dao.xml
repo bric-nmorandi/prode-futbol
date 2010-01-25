@@ -34,5 +34,19 @@
        <bean id="ligaDao" class="ar.com.futbolprode.negocio.logica.dao.impl.LigaDaoImpl" >                                   
               <property name="hibernateTemplate" ref="prodeHibernateTemplate"/>
        </bean>              
-       
+       <bean id="usuarioDao" class="ar.com.futbolprode.negocio.logica.dao.impl.UsuarioDaoImpl" >                                   
+              <property name="hibernateTemplate" ref="prodeHibernateTemplate"/>
+       </bean>
+       <bean id="rolDao" class="ar.com.futbolprode.negocio.logica.dao.impl.RolDaoImpl" >                                   
+              <property name="hibernateTemplate" ref="prodeHibernateTemplate"/>
+       </bean>
+       <bean id="usuarioRolDao" class="ar.com.futbolprode.negocio.logica.dao.impl.UsuarioRolDaoImpl" >                                   
+              <property name="hibernateTemplate" ref="prodeHibernateTemplate"/>
+       </bean>
+       <bean id="rolPermisoDao" class="ar.com.futbolprode.negocio.logica.dao.impl.RolPermisoDaoImpl" >                                   
+              <property name="hibernateTemplate" ref="prodeHibernateTemplate"/>
+       </bean>                                                 
+       <bean id="permisoDao" class="ar.com.futbolprode.negocio.logica.dao.impl.PermisoDaoImpl" >                                   
+              <property name="hibernateTemplate" ref="prodeHibernateTemplate"/>
+       </bean>                     
 </beans>

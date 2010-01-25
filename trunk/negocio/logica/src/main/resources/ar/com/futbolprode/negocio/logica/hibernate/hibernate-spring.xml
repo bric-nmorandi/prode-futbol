@@ -43,7 +43,7 @@
                 <prop key="hibernate.connection.url">jdbc:postgresql://localhost:5432/prode</prop>
                 <prop key="hibernate.connection.username">prode</prop>
                 <prop key="hibernate.connection.password">desarrollo</prop>
-                <prop key="hibernate.hbm2ddl.auto">false</prop>
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
                 <prop key="hibernate.show_sql">true</prop>
                 <prop key="hibernate.connection.pool_size">5</prop>
                 <prop key="hibernate.jdbc.batch_size">0</prop>
@@ -62,6 +62,11 @@
 				<value>ar/com/futbolprode/negocio/logica/mapping/PartidoFecha.hbm.xml</value>
 				<value>ar/com/futbolprode/negocio/logica/mapping/Resultado.hbm.xml</value>
 				<value>ar/com/futbolprode/negocio/logica/mapping/Liga.hbm.xml</value>
+				<value>ar/com/futbolprode/negocio/logica/mapping/Usuario.hbm.xml</value>
+				<value>ar/com/futbolprode/negocio/logica/mapping/Rol.hbm.xml</value>
+				<value>ar/com/futbolprode/negocio/logica/mapping/Permiso.hbm.xml</value>				
+				<value>ar/com/futbolprode/negocio/logica/mapping/RolPermiso.hbm.xml</value>
+				<value>ar/com/futbolprode/negocio/logica/mapping/UsuarioRol.hbm.xml</value>
 			</list>
 		</property>
         <property name="entityInterceptor"  ref="auditInterceptor"/>            

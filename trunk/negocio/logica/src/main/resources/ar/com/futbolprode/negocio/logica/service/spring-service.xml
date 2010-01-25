@@ -79,4 +79,44 @@
 			</bean>
 		</property>
 	</bean>	
+	<bean id="usuarioService" parent="prodeTransactionProxy">
+		<property name="target">
+			<bean
+				class="ar.com.futbolprode.negocio.logica.service.impl.UsuarioServiceImpl">
+				<property name="usuarioDao" ref="usuarioDao" />
+			</bean>
+		</property>
+	</bean>
+	<bean id="usuarioRolService" parent="prodeTransactionProxy">
+		<property name="target">
+			<bean
+				class="ar.com.futbolprode.negocio.logica.service.impl.UsuarioRolServiceImpl">
+				<property name="usuarioRolDao" ref="usuarioRolDao" />
+			</bean>
+		</property>
+	</bean>
+	<bean id="rolService" parent="prodeTransactionProxy">
+		<property name="target">
+			<bean
+				class="ar.com.futbolprode.negocio.logica.service.impl.RolServiceImpl">
+				<property name="rolDao" ref="rolDao" />
+			</bean>
+		</property>
+	</bean>
+	<bean id="rolPermisoService" parent="prodeTransactionProxy">
+		<property name="target">
+			<bean
+				class="ar.com.futbolprode.negocio.logica.service.impl.RolPermisoServiceImpl">
+				<property name="rolPermisoDao" ref="rolPermisoDao" />
+			</bean>
+		</property>
+	</bean>
+	<bean id="permisoService" parent="prodeTransactionProxy">
+		<property name="target">
+			<bean
+				class="ar.com.futbolprode.negocio.logica.service.impl.PermisoServiceImpl">
+				<property name="permisoDao" ref="permisoDao" />
+			</bean>
+		</property>
+	</bean>									
 </beans>
