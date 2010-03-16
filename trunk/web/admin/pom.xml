@@ -13,7 +13,11 @@
 
   
   <dependencies>
-    
+    	<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring</artifactId>
+			<version>2.5.6</version>
+		</dependency>
   </dependencies>	
   <build>
 		<pluginManagement>
@@ -47,6 +51,13 @@
 								</value>
 							</systemProperty>
 						</systemProperties>
+						<requestLog implementation="org.mortbay.jetty.NCSARequestLog">
+							<filename>target/yyyy_mm_dd.request.log</filename>
+							<append>true</append>
+							<retainDays>90</retainDays>
+							<extended>false</extended>
+							<logTimeZone>GMT</logTimeZone>
+						</requestLog>
 					</configuration>
 				</plugin>
 			</plugins>
