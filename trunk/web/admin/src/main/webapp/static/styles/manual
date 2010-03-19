@@ -1,0 +1,8 @@
+MANUAL
+El body tiene width:890px para asi suplementar 5px con el padding-left y no limitar en el lado derecho causando problemas de flote de divisiones y expansion inecesaria del DIV
+
+
+dos columnas:
+span-11 para crear los contenedores
+span-10 para los contenidos
+

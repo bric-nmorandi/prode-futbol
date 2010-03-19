@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:c="http://java.sun.com/jstl/core"
+    xmlns:t="http://myfaces.apache.org/tomahawk">
+<head>
+<title>
+	<ui:insert name="title">.::SUMAT - Gestion de Fiscalizacion::.</ui:insert>
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="../static/styles/default.css"/>
+<script type="text/javascript" src="../static/javascript/util.js"></script>
+<script type="text/javascript" src="../static/javascript/ddsmoothmenu.js"></script>
+<script type="text/javascript" src="../static/javascript/jquery-1.2.6.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../static/styles/ddsmoothmenu.css" />
+<link rel="stylesheet" type="text/css" href="../static/styles/ddsmoothmenu-v.css" />
+<script type="text/javascript" src="../static/javascript/ddsmoothmenu.js"></script>
+<ui:insert name="styles" />
+<script type="text/javascript">
+window.onresize=RezPag;
+</script>
+			
+</head>
+<body bgcolor="#ffffff" onload="RezPag();">
+
+<div id="maincont">
+
+	<div id="colL" class="leftbar">
+		<ui:insert name="leftbar">
+			<ui:include src="/includes/leftbar.jspx"/>
+		</ui:insert>	
+	</div>
+	<div id="subC" class="subcont">
+		<div class="header">
+			<ui:insert name="header">
+				<ui:include src="/includes/header.jspx"/>
+			</ui:insert>
+		</div>
+		
+		<div class="menu">
+			<ui:insert name="menu">
+				<ui:include src="/includes/menu.jspx"/>
+			</ui:insert>
+		</div>
+		
+		<div id="bCont" class="bodycont">
+			 <ui:insert name="body">
+			 	<ui:include src="/includes/bodyBlank.jspx"/>
+			 </ui:insert>	
+		</div>			
+		
+		<div id="footer" class="footer">
+			<ui:insert name="footer">
+				<ui:include src="/includes/footer.jspx"/>
+			</ui:insert>		
+		</div>
+	</div>
+	<div id="colR" class="rightbar">
+		<ui:insert name="rightbar">
+			<ui:include src="/includes/rightbar.jspx"/>
+		</ui:insert>	
+	</div>
+</div>
+</body>
+</html>

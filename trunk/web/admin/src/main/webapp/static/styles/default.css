@@ -1,0 +1,705 @@
+/* Reset --------------------------------------------------------------------------------------------------------------------*/
+
+html,body{
+	font-family:Arial, Helvetica, sans-serif;
+	margin:0 auto;
+	height:100%;
+	font-size:9pt;
+	color:#555;
+	font-weight:normal;
+}
+
+body{
+	background-image:URL(img/SUMAT_body_bg.jpg);
+	background-repeat:repeat-x;
+}
+
+.Form{
+	float:left;
+	/*padding:10px;*/
+}
+
+#maincont{
+	width:922px;
+	height:100%;
+	/*min-height: 500px;*/
+	
+	margin:0 auto;
+	/*position:relative;*/
+	min-height:600px;
+}
+
+.subcont{
+	width:900px;
+	/*height:100%;*/
+	min-height:500px;
+	margin:0 auto;
+	float:left;
+}
+
+.leftbar{
+background-image:URL(img/SUMAT_left_out.png);
+float:left;
+min-height:10px;
+width:11px;
+}
+
+.rightbar{
+background-image:URL(img/SUMAT_right_out.png);
+float:left;
+min-height:10px;
+width:11px;
+}
+
+.header{
+background-image:URL(img/SUMAT_header.png);
+float:left;
+height:70px;
+width:900px;
+}
+
+.menu{
+background-image:URL(img/SUMAT_menu.png);
+float:left;
+height:23px;
+width:900px;
+}
+
+.bodycont{
+	float:left;
+	padding-left:5px;
+	min-height:489px;
+	height:auto;
+	width:890px;
+}
+
+
+
+#footer{
+	background-image:URL(img/SUMAT_footer.png);
+	background-repeat:repeat-x;
+	float:left;
+	height:21px;
+	width:900px;
+	left:11px;
+	margin:0 auto;
+	/*position:absolute;*/
+	bottom:0;
+}
+
+.login{
+	float:left;
+	width:298px;
+	background-color:#aaaaaa;
+	border:2px solid #FFFFFF;
+	position:relative;
+	top:95px;
+}
+
+.clear{
+	clear:both;
+}
+
+/*Titulos--------------------------------------------------------------------------------------------------------------------*/
+
+.Titles{
+	border-bottom:1px dashed #5F5F5F;
+	float:left;
+	font-size:large;
+	font-weight:normal;
+	margin-top:5px;
+	margin-bottom:10px;
+	width:890px;
+	text-align:right;
+}
+
+h1{
+	border-bottom:1px dashed #5F5F5F;
+	float:left;
+	font-size:large;
+	font-weight:normal;
+	margin-top:5px;
+	margin-bottom:10px;
+	width:890px;
+	text-align:right;
+}
+
+h2{
+	border-bottom:1px dashed #5F5F5F;
+	float:left;
+	font-size:14px;
+	font-weight:bolder;
+	margin-bottom:10px;
+	margin-top:0;
+	text-align:justify;
+	width:100%;
+}
+
+h3{
+	float:left;
+	font-size:12px;
+	margin-bottom:10px;
+	margin-top:0;
+}
+
+hr{
+	float:left;
+	width:100%;
+	border-bottom:1px dashed black;
+	border-top:none;
+	border-right:none;
+	border-left:none;
+	margin-top:10px;
+	margin-bottom:10px;	
+}
+
+/*Menu---------------------------------------------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+#headerLogout{
+float:left;
+width:100%;
+border:none;
+}
+
+#headerInfo{
+float:left;
+margin:0px;
+/*margin:3px -8px;*/
+text-align:right;
+width:100%;
+color:white;
+}
+
+#headerInfo a, #headerInfo a img {
+border:none;
+}
+
+.innerForm{
+float:left;
+margin-bottom:10px;
+}
+
+.innerForm label{
+padding:5px;
+}
+
+input{
+	width:140px;
+	border:1px solid #999999;
+	background:#CCCCCC none repeat scroll 0 0;
+	margin:1px;
+}
+
+input:focus, input:hover {
+border:1px solid #333333;
+}
+
+/*LOGIN*/
+
+.login fieldset{
+background:none;
+margin:0;
+}
+
+#loginForm {
+width:300px;
+margin:auto;
+}
+
+#loginForm .login fieldset{
+padding:10px;
+border:none;
+}
+
+#loginForm legend{
+font-weight:bold;
+font-size:9pt;
+}
+
+#loginForm label{
+background-color:#E7E7E7;
+display:block;
+float:left;
+padding:7px 10px 5px;
+width:256px;
+}
+
+#loginForm input {
+margin-right:20px;
+border:1px solid #999999;
+float:right;
+clear:right;
+background:#CCCCCC;
+}
+
+#loginForm input:focus,#loginForm input:hover {
+border:1px solid #333333;
+}
+
+.mExito {
+color:green;
+font-weight:bold;
+padding:0;
+}
+
+
+/*ERRORES*/
+.mError li{
+list-style-image:url(img/listError.gif);
+list-style-position:inside;
+list-style-type:none;
+color:red;
+
+}
+
+.mError {
+color:red;
+font-weight:bold;
+padding:0;
+}
+
+.Error{
+display:inline;
+float:left;
+margin:2px;
+padding:2px;
+}
+
+
+/*TABLAS*/
+.standardTable {
+background-color:#EEEEEE;
+border:2px solid gray;
+border-collapse:collapse;
+border-spacing:0;
+float:left;
+width:100%;
+margin-bottom:10px;
+}
+
+.standardTable tr{
+height:25px;
+}
+
+.standardTable td{
+border:1px dotted #BBBBBB;
+text-align:center
+}
+
+.standardTable_SortHeader {
+background-color:#BBBBBB;
+background-image:url(img/tableBg.jpg);
+border:1px dotted gray;
+padding:4px;
+color:white;
+}
+
+.standardTable_Footer {
+	border-width: 1px 1px 1px 1px;
+	padding: 4px 4px 4px 4px;
+	border-style: dotted dotted dotted dotted;
+	border-color: gray gray gray gray;
+	background-color: #bbbbbb;
+}
+
+/*TABS*/
+.inactiveTab{
+	color:#ffffff;
+	background-image:URL(img/SUMAT_tab_inactive.jpg);
+	background-repeat:repeat;
+	font-weight:bold;
+}
+
+.inactiveTab :hover{
+	background-image:URL(img/SUMAT_tab_inactive_hover.jpg);
+}
+
+
+.activeTab{
+	color:white;
+	background-image:URL(img/SUMAT_tab_active.jpg);
+	background-repeat:repeat;
+	font-weight:bold;
+}
+
+.tabContent{
+	background-image:URL(img/SUMAT_tab_content_bg.jpg);
+	background-repeat:repeat-x;	
+}
+
+.tabHeader{
+	border-bottom:1px solid black;
+}
+
+/*LABELS*/
+
+.labelInput{
+
+}
+
+.labelOutput{
+display:inline;
+margin-left:10px;
+}
+
+
+/*Fieldsets--------------------------------------------------------------------------------------------------------------------*/
+
+fieldset {padding:1.4em;margin:0;border:1px solid #ccc; background:#fff;}
+fieldset{
+	float:left;
+	background-color:#fff;
+	border:1px solid black;
+	background-image:URL(img/SUMAT_tab_content_bg.jpg);
+	background-repeat:repeat-x;
+	margin-top:10px;
+	margin-bottom:10px;	
+	display:inline;
+}
+
+legend{
+	background-color:#ddd;
+	border:1px solid black;
+}
+
+/* Columnas--------------------------------------------------------------------------------------------------------------------*/
+.span-1  { width: 30px;}
+.span-2  { width: 70px;}
+.span-3  { width: 110px;}
+.span-4  { width: 150px;}
+.span-5  { width: 190px;}
+.span-6  { width: 230px;}
+.span-7  { width: 270px;}
+.span-8  { width: 310px;}
+.span-9  { width: 350px;}
+.span-10 { width: 408px; min-height:270px;}
+.span-11 { width: 440px; min-height:270px; margin:1px;}
+.span-12 { width: 470px;}
+.span-13 { width: 510px;}
+.span-14 { width: 550px;}
+.span-15 { width: 590px;}
+.span-16 { width: 630px;}
+.span-17 { width: 670px;}
+.span-18 { width: 710px;}
+.span-19 { width: 750px;}
+.span-20 { width: 790px;}
+.span-21 { width: 830px;}
+.span-22 { width: 870px;}
+.span-23 { width: 910px;}
+.span-24, div.span-24 { width:950px; margin:0; }
+
+
+
+/* resto del ancho de la columna al utilizar cols-4 */
+.cols-5{ width: 662px; min-height:100px; margin:1px;}
+
+/*4 columnas*/
+.cols-4  { width: 218px; min-height:100px; margin:1px;}
+
+/*3 columnas*/
+.cols-3  { width: 292px; min-height:100px; margin:1px;}
+
+
+/*2 columnas*/
+.cols-2 { width: 440px; min-height:100px; margin:1px;}
+
+/*1 columnas*/
+.cols-1 { width: 884px;min-height:100px; margin:1px;}
+
+
+.cols-1 label{
+	min-width:200px;
+}
+
+
+.visitado {
+	text-decoration: underline;
+}
+
+/*Errores en Login de IFZ*/
+.noPermitido{
+text-align: center; 
+vertical-align: middle;
+margin:0 auto; 
+background-color:white; 
+border:3px solid #AF0005; 
+width:400px; 
+padding:10px;
+}
+
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------Obtenido desde screen.css----------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+a {color:#ab0000; outline:none; text-decoration:none;}
+
+/* table {width:100%;border-bottom:1px solid #ccc;}
+thead th {font-weight:bold;background-image:#d0caaa; color:#666; border-right:1px solid #fff;  }
+table tr.activo td{ background:#f3efd4;}
+tr.activo { border:1px solid #9b9b8f; border-width:1px 0; }
+th, td {padding:2px 5px 1px; xwhite-space:nowrap; line-height:13px; height:17px; }
+thead th.noIco { padding-left:5px;  }
+thead td.last { border-right:1px solid #fff; padding-right:5px; }
+tbody td { border-right:1px solid #ccc; xwhite-space:nowrap; color:#666; height:17px; }
+td.nowrap { white-space:nowrap;}
+tr.even td {background:#ebebeb;} */
+
+
+/* grid.css */
+.container {width:950px;margin:0 auto;}
+.showgrid {background:url(img/grid.png);}
+
+/* Sets up basic grid pfloating and margin. */
+div.span-1, div.span-2, div.span-3, div.span-4, div.span-5, div.span-6, div.span-7, div.span-8, div.span-9, div.span-10, div.span-11, div.span-12, div.span-13, div.span-14, div.span-15, div.span-16, div.span-17, div.span-18, div.span-19, div.span-20, div.span-21, div.span-22, div.span-23, div.span-24 {float:left;}
+
+div.cols-1, div.cols-2, div.cols-3, div.cols-4, div.cols-5, div.cols-6, div.cols-7, div.cols-8, div.cols-9, div.cols-10, div.cols-11, div.cols-12, div.cols-13, div.cols-14, div.cols-15, div.cols-16, div.cols-17, div.cols-18, div.cols-19, div.cols-20, div.cols-21, div.cols-22, div.cols-23, div.cols-24 {float:left;}
+
+
+/*CSS TESTING*/
+form.cols-1, form.cols-2, form.cols-3, form.cols-4, form.cols-5, form.cols-6, form.cols-7, form.cols-8, form.cols-9, form.cols-10, form.cols-11, form.cols-12, form.cols-13, form.cols-14, form.cols-15, form.cols-16, form.cols-17, form.cols-18, form.cols-19, form.cols-20, form.cols-21, form.cols-22, form.cols-23, form.cols-24 {float:left;}
+/*CSS TESTING*/
+
+
+
+/* The last column in a row needs this class. */
+div.last { margin-right: 0; }
+
+.box {background:#fff url(img/boton_bg.png) repeat-x bottom; border:1px solid #ccc;}
+
+form .acciones {
+	background:#fff url(img/boton_bg.png) repeat-x bottom;
+}
+
+hr {background:#ddd;color:#ddd;clear:both;float:none;width:100%;height:.1em;margin:1.45em 0 1.45em;border:none;}
+hr.space {background:#fff;color:#fff;}
+.clearfix:after, .container:after {content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix, .container {display:inline-block;}
+* html .clearfix, * html .container {height:1%;}
+.clearfix, .container {display:block;}
+.clear {clear:both;}
+
+/* forms.css */
+
+label { 
+	margin-left:0px; 
+}
+
+.columnas { color:black;}
+.columnas p {clear:left;}
+.columnas label { float:left; display:block;  width:100px;}
+.columnas input.text, .columnas select, .columnas textarea, .columnas .text { width:270px; text-transform:uppercase; margin:2px 2px 0;}
+.columnas .text {}
+
+legend {
+font-weight:bold;
+font-size:1.2em;
+-moz-border-radius-topleft:4px;
+-moz-border-radius-topright:4px;
+border:1px solid white;
+font-size:1.2em;
+font-weight:bold;
+padding:0 5px;}
+
+input[type=text]:focus, input.title:focus, textarea:focus, select:focus {}
+input.text, input.title {width:300px;padding:1px;}
+input.title {font-size:1.5em;}
+input[type=checkbox] { margin:4px; width:auto;}
+.center { text-align:center;}
+textarea {width:390px;height:250px;padding:5px;}
+.error, .notice, .success {padding:2px 9px;margin:0;border:1px solid #ddd; border-bottom:0;}
+.error {background:#f4f0d3;color:#716c59;border-color:#d2d2c6;}
+.notice {background:#ddd;color:#555;border-color:#ccc; margin-top:20px;height:20px;float:left;width:390px;}
+.success {background:#E6EFC2;color:#264409;border-color:#C6D880;}
+.error a {color:#8a1f11;}
+.notice a {color:#514721;}
+.success a {color:#264409;}
+.boton, .botonCambCont { background:url(img/boton_bg.png) repeat-x; color:#4e4d49; border:1px solid #9e9e9e; cursor:pointer; font-weight:bold; font-size:11px; margin:2px 2px 0;}
+.botonDerecha { float: right; margin-right:26px;}
+a.boton { padding:0 5px; font-size:11px; color:#4e4d49; }
+
+a.cerrar  { float:right; line-height:23px; color:#fff; font-size:11px; text-decoration:none; font-weight:bold; margin-right:13px; }
+.cerrar  { float:left; line-height:23px; color:#fff; font-size:11px; text-decoration:none; font-weight:bold; }
+a.cerrar:hover{color:#ccc;}
+
+p.lugar { line-height:26px; font-size:12px; color:#3f54a7; margin-bottom:23px;}
+p.lugar strong { color:#3f54a7; }
+
+
+
+
+
+/*Botones del footer de la  grilla*/
+.acciones {
+	margin-bottom:1px; color:#ccc;
+	/*border-top:1px solid #e5e5e5; NO VA EL BORDE*/
+	padding:1px 0; text-align:right;
+	line-height:16px;
+}
+.acciones span.left { float:left; margin:2px 0 0 6px; color:#666; }
+.acciones a span, .accion span { display:none; }
+.acciones a { background:url(img/acciones.png) no-repeat; padding:0 10px; font-size:16px; position:relative; top:4px; margin:0px 2px; line-height:16px; }
+.accion { background:url(img/acciones.png) no-repeat; padding:0 8px; font-size:12px; line-height:16px; }
+.acciones .seleccionar { background-position: center 0px;}
+.acciones .crearCarpeta { background-position: center -26px;}
+.acciones .borrar, .borrar { background-position: center -53px;}
+.acciones .editar, .editar { background-position: center -80px;}
+.acciones .crearDoc { background-position: center -107px;}
+.acciones .filtrar { background-position: center -136px;}
+.acciones .nivel { background-position: center -258px;}
+.acciones .estadisticas { background-position: center -283px;}
+.paginado { margin:10px;}
+.paginado a { background:url(img/paginado.png) no-repeat center 2px; padding:0 5px; line-height:11px; font-size:11px; position:relative; top:5px; margin:0px; top:0; color:#999;}
+.paginado a.activo { text-decoration:underline; color:#2e4976; }
+.paginado a span { display:none;}
+.paginado a.primero { background-position: center -10px;}
+.paginado a.anterior { background-position: center -24px;}
+.paginado a.siguiente { background-position: center -38px;}
+.paginado a.ultimo { background-position: center -52px;}
+th.ordenar { padding-right:25px;}
+th.ordenar a{ background:url(img/acciones.png) no-repeat center -158px; display:block; float:right; width:18px; height:18px; position:relative; right:-25px; top:0;}
+th.ordenar a span { display:none; }
+
+
+.obligatorio{ background-position: center -215px;}
+.agregar{ background-position: center -236px;}
+
+.acciones .activo, .activo { background-position: center -196px;}
+.acciones .inactivo, .inactivo { background-position: center -213px;}
+.acciones .subir, .subir { background-position: center -178px;}
+.acciones .bajar, .bajar { background-position: center -158px;}
+
+h2 .titAccion { background:url(img/accion_tit.png) no-repeat; position:absolute; top:1px; right:0; width:18px; height:18px;}
+h3 .titAccion { background:url(img/accion_tit.png) no-repeat; position:absolute; top:3px; right:0; width:36px; height:16px;}
+.span-1 .accion { background:url(img/accion_tit.png) no-repeat 10px -68px; width:30px; height:51px; display:block;}
+h3 .cerrar { background-position:0 -18px;}
+h3 .actualizar { background-position:0 -35px;}
+.titAccion span { display:none;}
+
+.archivo { background:url(img/archivos.png) no-repeat center 0px; padding:0 10px; font-size:16px; }
+.archivo span { display:none; }
+.carpeta { background-position: center -20px;}
+.adjunto { background-position: center -46px;}
+.writer { background-position: center -129px;}
+.calc { background-position: center -109px;}
+.acrobat { background-position: center -89px;}
+.calendario { background-position: center -152px;}
+
+.botones { float:right; position:relative; z-index:1;}
+.botones input[type=submit] { background:url(img/boton-filtro_bg.png) repeat-x;}
+
+.minWidth { width:1px;}
+
+
+.overflow { overflow:auto; overflow-y:hidden}
+.overflowY { overflow:auto;}
+/*.pie { clear:both; margin-top:15px; padding-top:15px; border-top:1px solid #ccc;}*/
+.pie { clear:both; float:right;}
+
+.box .box { margin:10px; clear:left; background:#f4f4f4;}
+.box-3 { padding:11px 10px 15px 10px;}
+
+
+/*OVERRIDE RICHFACES*/
+.rich-list-picklist-button {
+	background:url(img/boton_bg.png) repeat-x;
+	color:#4e4d49; border:1px solid #9e9e9e;
+	cursor:pointer; font-weight:bold; 
+	font-size:11px; margin:2px 2px 0;
+}
+
+/*AGREGADO PARA EFECTO HOVER DE TABLA, LIMITADO A PANEL IZQ*/
+.span-10 table tbody tr:hover td {background:#ccc ;color:black;}
+
+/*ESTO ES PARA QUE LOS SPAN DENTRO DE LAS CELDAS DE LAS TABLAS RESPETEN EL ALTO FIJO*/
+.textoTruncado span {display: inline-block;height:17px;overflow: hidden;}
+
+/*.footer {text-align: center; vertical-align: bottom; float: right; width: 950px; padding-top: 40px;}*/
+
+.UsuRoles {border-bottom:0 none; margin-top:10px; margin-bottom:10px;}
+.UsuRoles td {border-right:0 none; line-height:22px; padding:0;}
+.UsuRoles label {font-weight:normal; width:177px;}
+.UsuRolesEnabled label {font-weight:normal;}
+.selectOverflow .UsuRoles :hover td{background:none;color:#666666}
+
+.selectOverflow {height:100px;overflow:auto;width:372px;}
+.clCommand a {font-size:smaller;}
+
+.cuerpo {height:465px;overflow-y:auto;padding-top:15px;}
+
+.menu li.activo {
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+background:transparent url(img/menu_activo.png) repeat scroll left top;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------Obtenido desde screen.css----------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+select{
+border:2px solid #999999;
+float:right;
+clear:right;
+background:#CCCCCC;
+}
+
+
+
+
+/*----------------------------------*/
+
+.GridTitle {
+	-x-system-font:none;
+	background-image:url(img/SIMAT_tableBg.jpg);
+	border:1px none #8E8E8E;
+	color:White;
+	font-family:Verdana;
+	font-size:8pt;
+	font-size-adjust:none;
+	font-stretch:normal;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	height:20px;
+	ime-mode:auto;
+	line-height:normal;
+	margin:1px;
+	text-decoration:none;
+}
+
+.GridOdd {
+	-x-system-font:none;
+	background-color:White;
+	border-width:0;
+	font-family:Verdana;
+	font-size:8pt;
+	font-size-adjust:none;
+	font-stretch:normal;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:normal;
+	text-decoration:none;
+}
+
+.GridEven {
+	-x-system-font:none;
+	background-color:#CCCCCC;
+	border-width:0;
+	font-family:Verdana;
+	font-size:8pt;
+	font-size-adjust:none;
+	font-stretch:normal;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:normal;
+	text-decoration:none;
+}
+
+.Grid {
+border:2px solid #AAA;
+border-spacing:1px;
+}
