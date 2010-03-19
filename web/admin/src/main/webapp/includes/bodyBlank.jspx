@@ -1,0 +1,29 @@
+<ui:composition template="/includes/template.jspx"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:t="http://myfaces.apache.org/tomahawk"
+	xmlns:a4j="https://ajax4jsf.dev.java.net/ajax"
+	xmlns:jdt="http://www.jenia.org/jsf/dataTools">
+
+	<ui:define name="body">
+			<div id="bCont" class="bodycont">
+				<div class="login">
+					<form id="loginform" method="post" action="">
+						<fieldset>
+							<label for="username"><input type="text" name="username" tabindex="1" id="username" />
+								usuario:
+							</label>
+							<label for="password"><input type="password" name="password" tabindex="2" id="password" />
+								password:
+							</label>
+							<label for="submit">
+								<input name="Submit" type="submit" id="submit" tabindex="4" value="Log in" />
+							</label>
+						 </fieldset>
+					</form>
+				</div>
+			</div>
+	</ui:define>
+</ui:composition>
