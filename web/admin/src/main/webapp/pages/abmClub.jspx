@@ -19,8 +19,8 @@
 		<h:form id="formClub">
 			<t:panelGroup id="panClub">
 				<t:dataList id="dataClub" var="club"  
-					value="#{clubBean.club}"
-					rows="#{clubBean.ROWS}"
+					value="#{listaClubBean.clubes}"
+					rows="#{listaClubBean.ROWS}"
 					preserveRowStates="false"
 					>
 

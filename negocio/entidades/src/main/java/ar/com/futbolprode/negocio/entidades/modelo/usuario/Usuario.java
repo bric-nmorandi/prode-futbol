@@ -1,9 +1,12 @@
 package ar.com.futbolprode.negocio.entidades.modelo.usuario;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import ar.com.futbolprode.commons.auditor.Auditor;
+import ar.com.futbolprode.negocio.entidades.modelo.jugada.UsuarioJugada;
 
 /**
  * Clase que define el usuario del sistema
@@ -29,7 +32,12 @@ public class Usuario extends Auditor {
 	 * 	
 	 */
 	protected Set<UsuarioRol> roles;
-
+	/**
+	 * 
+	 */
+	protected List<UsuarioJugada> usuarioJugada;
+	
+ 
 	public String getNombre() {
 		return nombre;
 	}
@@ -65,4 +73,17 @@ public class Usuario extends Auditor {
 		this.roles = roles;
 	}
 
+	public List<UsuarioJugada> getUsuarioJugada() {
+		if(this.usuarioJugada==null){
+			this.usuarioJugada=new ArrayList<UsuarioJugada>();
+		}
+		return usuarioJugada;
+	}
+
+	public void setUsuarioJugada(List<UsuarioJugada> usuarioJugada) {
+		if(this.usuarioJugada==null){
+			this.usuarioJugada=new ArrayList<UsuarioJugada>();
+		}
+		this.usuarioJugada = usuarioJugada;
+	}
 }
