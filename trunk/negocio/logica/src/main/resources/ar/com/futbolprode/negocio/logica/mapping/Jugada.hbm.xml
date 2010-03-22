@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="ar.com.futbolprode.negocio.entidades.modelo.jugada">
+  <class name="Jugada" table="jugada" lazy="false" >
+  	<id access="field" column="jugada_id" name="id" type="integer">
+  		<generator class="increment" />
+  	</id>
+  	<many-to-one name="resultado" class="ar.com.futbolprode.negocio.entidades.modelo.torneo.Resultado" column="resultado_id" access="field"/>
+  	<many-to-one name="partidoFecha" class="ar.com.futbolprode.negocio.entidades.modelo.torneo.PartidoFecha" column="partido_fecha_id" access="field"/>  	
+  </class>
+</hibernate-mapping>
