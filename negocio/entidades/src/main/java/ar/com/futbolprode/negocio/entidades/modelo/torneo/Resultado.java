@@ -19,6 +19,20 @@ public class Resultado extends Auditor {
 	 * se pueden escribir observaciones del partido como, suspensión, expulsiones, penales errados.
 	 */
 	private String observaciones;
+	
+	public Resultado() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Resultado(char valor) {
+		this.valor=valor;
+	}
+	
+	public Resultado(String observaciones,char valor) {
+		this.valor=valor;
+		this.observaciones=observaciones;
+	}
+	
 	public char getValor() {
 		return valor;
 	}

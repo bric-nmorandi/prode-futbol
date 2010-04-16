@@ -36,8 +36,17 @@ public class Usuario extends Auditor {
 	 * 
 	 */
 	protected List<UsuarioJugada> usuarioJugada;
-	
- 
+
+	public Usuario() {
+		// TODO Auto-generated constructor stub
+	}
+	public Usuario(String nombre, String login, String password) {
+
+		this.nombre = nombre;
+		this.login = login;
+		this.password = password;
+	}
+
 	public String getNombre() {
 		return nombre;
 	}
@@ -74,15 +83,15 @@ public class Usuario extends Auditor {
 	}
 
 	public List<UsuarioJugada> getUsuarioJugada() {
-		if(this.usuarioJugada==null){
-			this.usuarioJugada=new ArrayList<UsuarioJugada>();
+		if (this.usuarioJugada == null) {
+			this.usuarioJugada = new ArrayList<UsuarioJugada>();
 		}
 		return usuarioJugada;
 	}
 
 	public void setUsuarioJugada(List<UsuarioJugada> usuarioJugada) {
-		if(this.usuarioJugada==null){
-			this.usuarioJugada=new ArrayList<UsuarioJugada>();
+		if (this.usuarioJugada == null) {
+			this.usuarioJugada = new ArrayList<UsuarioJugada>();
 		}
 		this.usuarioJugada = usuarioJugada;
 	}

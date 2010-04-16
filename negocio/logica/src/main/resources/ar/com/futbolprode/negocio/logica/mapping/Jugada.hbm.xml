@@ -7,7 +7,7 @@
   	<id access="field" column="jugada_id" name="id" type="integer">
   		<generator class="increment" />
   	</id>
-  	<many-to-one name="resultado" class="ar.com.futbolprode.negocio.entidades.modelo.torneo.Resultado" column="resultado_id" access="field"/>
+  	<many-to-one name="resultado" class="ar.com.futbolprode.negocio.entidades.modelo.torneo.Resultado" column="resultado_id" access="field" cascade="all"/>
   	<many-to-one name="partidoFecha" class="ar.com.futbolprode.negocio.entidades.modelo.torneo.PartidoFecha" column="partido_fecha_id" access="field"/>  	
   </class>
 </hibernate-mapping>

@@ -6,34 +6,26 @@
 	xmlns:t="http://myfaces.apache.org/tomahawk"
 	xmlns:a4j="https://ajax4jsf.dev.java.net/ajax"
 	xmlns:jdt="http://www.jenia.org/jsf/dataTools"
+	xmlns:p="http://primefaces.prime.com.tr/ui"
 	xmlns:rich="http://richfaces.org/rich">
-
 	<ui:define name="title">
   	.:: Prode - Gestion de Clubes - PDAs ::.
 	</ui:define>
-
-	<ui:define name="body">
-	
-	
-	
+	<ui:define name="body">	
 		<h:form id="formClub">
 			<t:panelGroup id="panClub">
 				<t:dataList id="dataClub" var="club"  
-					value="#{clubBean.club}"
-					rows="#{clubBean.ROWS}"
+					value="#{listaClubBean.clubes}"
+					rows="#{listaClubBean.ROWS}"
 					preserveRowStates="false"
 					>
-
- 					<p><h:outputText value="#{club.id}" />
+ 					<p> <h:outputText value="#{club.id}" />
  						<h:outputText value="#{club.nombre}" />
  						<h:outputText value="#{club.estadoClub.descripcion}" />
- 					</p>
-					
+ 					</p>					
 				</t:dataList>
+				<p:pieChart value="#{listaClubBean.estadisticas}" var="sale" categoryField="#{sale.nombre}" dataField="#{sale.cantidad}" />
 			</t:panelGroup>
-			
-
 		</h:form>
 	</ui:define>
 </ui:composition>
-

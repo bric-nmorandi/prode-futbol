@@ -10,7 +10,7 @@
   	<property name="fechaCreacion" access="field" column="fecha_creacion" type="date"/>
   	<many-to-one name="clubLocal" class="ar.com.futbolprode.negocio.entidades.modelo.club.Club" access="field" column="club_local_id"/>
   	<many-to-one name="clubVisitante" class="ar.com.futbolprode.negocio.entidades.modelo.club.Club" access="field" column="club_visitante_id"/>
-  	<many-to-one name="resultado" access="field" column="resultado_id" class="Resultado" />
+  	<many-to-one name="resultado" access="field" column="resultado_id" class="Resultado" cascade="all" />
   	<many-to-one name="fechaTorneo" class="FechaTorneo" column="fecha_torneo_id" access="field" />
   </class>
 </hibernate-mapping>

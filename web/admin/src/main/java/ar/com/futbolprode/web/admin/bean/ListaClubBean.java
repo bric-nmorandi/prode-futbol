@@ -19,14 +19,23 @@ public class ListaClubBean extends AdministrarBean {
 
 	public static final int ROWS=10;
 	
+	public List<EstadisticasClub> estadisticas;
+	
 	@Override
 	protected void init() {
 		this.populatedListaClub();
+		this.cargarEstadisticas();
 	}
 
 	public String listarClub() {
 		populatedListaClub();
 		return Constants.SUCCESS;
+	}
+	
+	public void cargarEstadisticas(){
+		this.estadisticas= new ArrayList<EstadisticasClub>();
+		this.estadisticas.add(new EstadisticasClub("nombre1", 10));
+		this.estadisticas.add(new EstadisticasClub("nombre2",20));
 	}
 
 	/**
@@ -57,5 +66,37 @@ public class ListaClubBean extends AdministrarBean {
 
 	public int getROWS() {
 		return ROWS;
+	}
+	public class EstadisticasClub {
+		public String nombre;
+		public int cantidad;
+		
+		public EstadisticasClub(String nombre,int cantidad) {
+			this.nombre=nombre;
+			this.cantidad=cantidad;			
+		}
+		public EstadisticasClub() {
+			// TODO Auto-generated constructor stub
+		}
+		public String getNombre() {
+			return nombre;
+		}
+		public void setNombre(String nombre) {
+			this.nombre = nombre;
+		}
+		public int getCantidad() {
+			return cantidad;
+		}
+		public void setCantidad(int cantidad) {
+			this.cantidad = cantidad;
+		}
+		
+	}
+	public List<EstadisticasClub> getEstadisticas() {
+		return estadisticas;
+	}
+
+	public void setEstadisticas(List<EstadisticasClub> estadisticas) {
+		this.estadisticas = estadisticas;
 	}
 }
