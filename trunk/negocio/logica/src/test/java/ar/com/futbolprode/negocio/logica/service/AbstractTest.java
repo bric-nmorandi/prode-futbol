@@ -12,6 +12,8 @@ import org.springframework.test.AbstractDependencyInjectionSpringContextTests;
 public class AbstractTest extends AbstractDependencyInjectionSpringContextTests {
 
 	protected static final int CERO = 0;
+	
+	protected static final int UNO = 1;	
 	/**
 	 * 
 	 */
@@ -36,8 +38,14 @@ public class AbstractTest extends AbstractDependencyInjectionSpringContextTests 
 	 * 
 	 */
 	private FechaTorneoService fechaTorneoService;
-	
-	
+	/**
+	 * 
+	 */
+	private JugadaService jugadaService;
+	/**
+	 * 
+	 */
+	private UsuarioService usuarioService;
 	@Override
 	protected String[] getConfigLocations() {
 		return new String[] { "classpath:/ar/com/futbolprode/negocio/logica/service/spring-service.xml" };
@@ -94,5 +102,21 @@ public class AbstractTest extends AbstractDependencyInjectionSpringContextTests 
 
 	public void setFechaTorneoService(FechaTorneoService fechaTorneoService) {
 		this.fechaTorneoService = fechaTorneoService;
+	}
+
+	public JugadaService getJugadaService() {
+		return jugadaService;
+	}
+
+	public void setJugadaService(JugadaService jugadaService) {
+		this.jugadaService = jugadaService;
+	}
+
+	public UsuarioService getUsuarioService() {
+		return usuarioService;
+	}
+
+	public void setUsuarioService(UsuarioService usuarioService) {
+		this.usuarioService = usuarioService;
 	}
 }
