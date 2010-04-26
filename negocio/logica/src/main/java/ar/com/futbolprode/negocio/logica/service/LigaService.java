@@ -27,4 +27,10 @@ public interface LigaService {
 	 * @param liga
 	 */
 	void save(Liga liga);
+	/**
+	 * Obtengo un objeto del tipo {@link Liga} de acuerdo a una descripcion
+	 * @param descripcion
+	 * @return
+	 */
+	Liga getBydescripcion(String descripcion);
 }

@@ -51,6 +51,11 @@ public class LigaServiceImpl implements LigaService {
 		this.ligaDao.save(liga);
 
 	}
+	
+	@Override
+	public Liga getBydescripcion(String descripcion) {
+		return this.getLigaDao().getByDescripcion(descripcion);
+	}
 
 	public LigaDao getLigaDao() {
 		return ligaDao;

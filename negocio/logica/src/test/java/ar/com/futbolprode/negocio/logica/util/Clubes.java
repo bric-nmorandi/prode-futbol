@@ -21,7 +21,12 @@ public enum Clubes {
 	public enum ClubesEstado {
 		activo, desactivo;
 	}
-	public enum ClubesLiga{		
-		salta,jujuy,primera,nacionalB,argentinoA,argentinoB,primeraB,primeraC,primeraD;
+
+	public enum ClubesLiga {
+		salta, jujuy, primera, nacionalB, argentinoA, argentinoB, primeraB, primeraC, primeraD,mundial;
+	}
+
+	public enum PaisesMundial2010 {
+		sudafrica, uruguay, mexico, francia, argentina, coreaDelSur, grecia, nigeria, inglaterra, estadosUnidos, argelia, eslovenia, alemania, serbia, ghana, australia, holanda, japon, dinamarca, camerun, italia, paraguay, nuevaZelanda, eslovaquia, brasil, portugal, costaDeMarfil, coreaDelNorte, espania, chile, suiza, honduras;
 	}
 }

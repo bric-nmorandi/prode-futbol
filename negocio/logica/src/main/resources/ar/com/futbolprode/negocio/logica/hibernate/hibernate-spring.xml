@@ -68,6 +68,7 @@
 				<value>ar/com/futbolprode/negocio/logica/mapping/RolPermiso.hbm.xml</value>
 				<value>ar/com/futbolprode/negocio/logica/mapping/UsuarioRol.hbm.xml</value>
 				<value>ar/com/futbolprode/negocio/logica/mapping/Jugada.hbm.xml</value>
+				<value>ar/com/futbolprode/negocio/logica/mapping/Grupo.hbm.xml</value>
 			</list>
 		</property>
         <property name="entityInterceptor"  ref="auditInterceptor"/>            

@@ -7,6 +7,9 @@
        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
        
    	   <import resource="classpath:ar/com/futbolprode/negocio/logica/hibernate/hibernate-spring.xml"/>
+   	   <bean id="grupoDao" class="ar.com.futbolprode.negocio.logica.dao.impl.GrupoDaoImpl" >                                   
+              <property name="hibernateTemplate" ref="prodeHibernateTemplate"/>
+       </bean>
    	   <bean id="jugadaDao" class="ar.com.futbolprode.negocio.logica.dao.impl.JugadaDaoImpl" >                                   
               <property name="hibernateTemplate" ref="prodeHibernateTemplate"/>
        </bean>
