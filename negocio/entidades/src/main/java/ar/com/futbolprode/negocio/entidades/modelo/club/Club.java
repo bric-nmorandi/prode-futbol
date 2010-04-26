@@ -7,6 +7,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import ar.com.futbolprode.commons.auditor.Auditor;
+import ar.com.futbolprode.negocio.entidades.modelo.grupo.Grupo;
 import ar.com.futbolprode.negocio.entidades.modelo.liga.Liga;
 import ar.com.futbolprode.negocio.entidades.modelo.torneo.TorneoClub;
 
@@ -36,6 +37,29 @@ public class Club extends Auditor {
 	 * Liga de futbol a la cual pertenece el club
 	 */
 	private Liga liga;
+
+	private Grupo grupo;
+	
+	public Club(String nombre, String descripcion, Liga liga,
+			EstadoClub estadoClub) {
+		this.nombre = nombre;
+		this.descripcion = descripcion;
+		this.liga = liga;
+		this.estadoClub = estadoClub;
+	}
+	
+	public Club(String nombre, String descripcion, Liga liga,
+			EstadoClub estadoClub,Grupo grupo) {
+		this.nombre = nombre;
+		this.descripcion = descripcion;
+		this.liga = liga;
+		this.estadoClub = estadoClub;
+		this.grupo=grupo;
+	}
+	
+	public Club() {
+		// TODO Auto-generated constructor stub
+	}
 
 	public EstadoClub getEstadoClub() {
 		return estadoClub;
@@ -79,5 +103,13 @@ public class Club extends Auditor {
 	public void setLiga(Liga liga) {
 		this.liga = liga;
 	}
-	
+
+	public Grupo getGrupo() {
+		return grupo;
+	}
+
+	public void setGrupo(Grupo grupo) {
+		this.grupo = grupo;
+	}
+
 }
