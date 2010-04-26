@@ -29,4 +29,6 @@ public interface LigaDao {
 	 * @param liga
 	 */
 	void save(Liga liga);
+	
+	Liga getByDescripcion(String descripcion);
 }
