@@ -9,7 +9,7 @@
 	xmlns:p="http://primefaces.prime.com.tr/ui"
 	xmlns:rich="http://richfaces.org/rich">
 	<ui:define name="title">
-  	.:: Prode - Gestion de Clubes - PDAs ::.
+  	.:: Prode - Gestion de Clubes ::.
 	</ui:define>
 	<ui:define name="body">	
 		<h:form id="formClub">
@@ -22,6 +22,7 @@
  					<p> <h:outputText value="#{club.id}" />
  						<h:outputText value="#{club.nombre}" />
  						<h:outputText value="#{club.estadoClub.descripcion}" />
+ 						<h:outputText value="#{club.grupo.descripcion}" />
  					</p>					
 				</t:dataList>
 				<p:pieChart value="#{listaClubBean.estadisticas}" var="sale" categoryField="#{sale.nombre}" dataField="#{sale.cantidad}" />
