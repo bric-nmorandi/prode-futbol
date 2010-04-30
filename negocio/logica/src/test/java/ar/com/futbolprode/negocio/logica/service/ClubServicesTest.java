@@ -7,7 +7,6 @@ import java.util.Random;
 
 import org.apache.commons.lang.math.IntRange;
 import org.apache.commons.lang.math.Range;
-
 import ar.com.futbolprode.negocio.entidades.modelo.club.Club;
 import ar.com.futbolprode.negocio.entidades.modelo.club.EstadoClub;
 import ar.com.futbolprode.negocio.entidades.modelo.grupo.Grupo;
