@@ -1,0 +1,4 @@
+Tareas realizadas
+-----------------
+1- Se cambio el jar, commons-web (se agregaron estructuras heredadas de Input).
+2- Se creo el bean ClubBean, para cambiar los datos de un club.

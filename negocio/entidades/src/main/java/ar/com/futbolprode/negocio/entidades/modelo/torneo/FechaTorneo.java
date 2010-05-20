@@ -46,6 +46,9 @@ public class FechaTorneo extends Auditor {
 	}
 
 	public Set<PartidoFecha> getPartidos() {
+		if (this.partidos == null) {
+			this.partidos = new HashSet<PartidoFecha>();
+		}
 		return partidos;
 	}
 

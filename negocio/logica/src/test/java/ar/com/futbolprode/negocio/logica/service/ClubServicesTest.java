@@ -24,7 +24,7 @@ public class ClubServicesTest extends AbstractTest {
 	/**
 	 * almacenar en la base de datos equipos
 	 */
-	public void testSave() {
+	private void testSave() {
 		if (this.getClubService().getAll().size() <= CERO) {
 			if (this.getEstadoClubService().getAll().size() <= CERO) {
 				this.insertEstadosClub();
@@ -50,7 +50,7 @@ public class ClubServicesTest extends AbstractTest {
 	/**
 	 * 
 	 */
-	public void testGetLiga() {
+	private void testGetLiga() {
 		for (Liga liga : this.getLigaService().getAll()) {
 			for (Club club : liga.getClubes()) {
 				System.out.println(club.getDescripcion() + " :"

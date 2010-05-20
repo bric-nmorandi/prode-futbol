@@ -12,8 +12,9 @@
   	.:: Prode - Gestion de Clubes ::.
 	</ui:define>
 	<ui:define name="body">	
-		<h:form id="formClub">
-			<t:panelGroup id="panClub">
+		<h:form id="formClub">			
+		<t:panelGroup id="panClub">
+			<!-- 
 				<t:dataList id="dataClub" var="club"  
 					value="#{listaClubBean.clubes}"
 					rows="#{listaClubBean.ROWS}"
@@ -25,7 +26,49 @@
  						<h:outputText value="#{club.grupo.descripcion}" />
  					</p>					
 				</t:dataList>
+				
 				<p:pieChart value="#{listaClubBean.estadisticas}" var="sale" categoryField="#{sale.nombre}" dataField="#{sale.cantidad}" />
+				-->
+				<t:div id="divExpedientes">
+			<t:dataTable value="#{listaClubBean.clubes}"
+				var="club" renderedIfEmpty="false" styleClass="standardTable"
+				headerClass="standardTable_SortHeader"
+				footerClass="standardTable_Footer"
+				rowClasses="standardTable_Row1,standardTable_Row2">
+				
+				<t:column>
+					<f:facet name="header">
+						<h:outputText value="Id" id="lblListaId" />
+					</f:facet>
+					<h:outputText value="#{club.id}" id="clubId" />
+				</t:column>
+				<t:column>
+				<h:commandLink action="#{listaClubBean.modificarClub}">
+					<f:facet name="header">
+						<h:outputText value="Nombre" id="lblListaNombre" />
+					</f:facet>
+					<h:outputText value="#{club.nombre}" id="clubNombre" />
+					<f:param name="paramIdClub" value="#{club.id}" />
+				</h:commandLink>
+				</t:column>
+				<t:column>
+				
+					<f:facet name="header">
+						<h:outputText value="Estado" id="lblListaEstado" />
+					</f:facet>
+					<h:outputText value="#{club.estadoClub.descripcion}" id="clubEstado" />
+				</t:column>
+				<t:column>
+					<f:facet name="header">
+						<h:outputText value="Grupo" id="lblListaGrupo" />
+					</f:facet>
+					<h:outputText value="#{club.grupo.descripcion}" id="clubGrupo" />
+				</t:column>																
+			</t:dataTable>
+			<h:outputText value="Clubes" id="LblSinClub"
+				rendered="#{(empty listaClubBean.clubes)}" />
+		</t:div>
+				
 			</t:panelGroup>
 		</h:form>
 	</ui:define>
