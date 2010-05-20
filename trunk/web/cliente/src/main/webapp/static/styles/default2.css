@@ -1,0 +1,343 @@
+html,body{
+font-family:Arial, Helvetica, sans-serif;
+margin:0 auto;
+height:100%;
+font-size:9pt;
+}
+
+body{
+	background-image:URL(img/SUMAT_body_bg.jpg);
+	background-repeat:repeat-x;
+}
+
+.Form{
+float:left;
+padding:10px;
+}
+
+.maincont{
+width:922px;
+/*height:632px;*/
+height:100%;
+margin:0 auto;
+}
+
+.subcont{
+width:900px;
+height:100%;
+margin:0 auto 0 11px;
+float:left;
+
+}
+
+.leftbar{
+background-image:URL(img/SUMAT_left_out.png);
+float:left;
+height:100%;
+width:11px;
+position:fixed;
+}
+
+.rightbar{
+background-image:URL(img/SUMAT_right_out.png);
+float:left;
+height:100%;
+width:11px;
+position:fixed;
+margin-left:911px;
+}
+
+.header{
+background-image:URL(img/SUMAT_header.png);
+float:left;
+height:92px;
+width:900px;
+}
+
+.menu{
+background-image:URL(img/SUMAT_menu.png);
+float:left;
+height:23px;
+width:900px;
+}
+
+.bodycont{
+float:left;
+padding-left:5px;
+min-height:470px;
+/*height:100%;*/
+width:890px;
+}
+
+.footer{
+background-image:URL(img/SUMAT_footer.jpg);
+float:left;
+height:21px;
+width:900px;
+position:relative;
+bottom:21px;
+}
+
+.login{
+float:left;
+width:298px;
+background-color:#aaaaaa;
+border:2px solid #FFFFFF;
+position:relative;
+top:95px;
+}
+
+.clear{
+clear:both;
+}
+
+/*TITULOS*/
+
+.Titles{
+border-bottom:1px dashed #5F5F5F;
+float:left;
+font-size:large;
+font-weight:normal;
+margin-top:5px;
+margin-bottom:10px;
+width:890px;
+text-align:right;
+}
+
+h1{
+	width:100%;
+	/*background-color:#999999;*/
+	margin:0;
+	font-size:12pt;
+	margin-bottom:4px;
+	float:left;
+}
+
+h2{
+	margin:0;
+	font-size:10pt;
+	margin-bottom:2px;
+	float:left;
+}
+
+hr{
+	float:left;
+	width:100%;
+	border-bottom:1px dashed black;
+	border-top:none;
+	border-right:none;
+	border-left:none;
+	margin-top:10px;
+	margin-bottom:10px;	
+}
+
+.menu ul{
+height:23px;
+float:left;
+margin:0;
+padding:0;
+}
+
+.menu ul li{
+color:#FFFFFF;
+float:left;
+height:23px;
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+margin-left:10px;
+margin-top:0px;
+text-align:center;
+}
+
+.menu ul li a{
+text-decoration:none;
+color:#ffffff;
+}
+
+.menu ul li a:hover{
+font-weight:bold;
+color:red;
+}
+
+#headerLogout{
+float:left;
+width:100%;
+border:none;
+}
+
+#headerInfo{
+float:left;
+margin:0px;
+/*margin:3px -8px;*/
+text-align:right;
+width:100%;
+color:white;
+}
+
+#headerInfo a, #headerInfo a img {
+border:none;
+}
+
+
+
+/*LOGIN*/
+
+.login fieldset{
+background:none;
+margin:0;
+}
+
+#loginForm {
+width:300px;
+margin:auto;
+}
+
+#loginForm .login fieldset{
+padding:10px;
+border:none;
+}
+
+#loginForm legend{
+font-weight:bold;
+font-size:9pt;
+}
+
+#loginForm label{
+background-color:#E7E7E7;
+display:block;
+float:left;
+padding:7px 10px 5px;
+width:256px;
+}
+
+#loginForm input {
+margin-right:0;
+border:1px solid #999999;
+float:right;
+clear:right;
+background:#CCCCCC;
+}
+
+#loginForm input:focus,#loginForm input:hover {
+border:1px solid #333333;
+}
+
+
+/*ERRORES*/
+.mError li{
+list-style-image:url(img/listError.gif);
+list-style-position:inside;
+list-style-type:none;
+color:red;
+
+}
+
+.mError {
+color:red;
+font-weight:bold;
+padding:0;
+}
+
+.Error{
+display:inline;
+float:left;
+/*margin:2px;
+padding:2px;*/
+}
+
+
+/*TABLAS*/
+.standardTable {
+background-color:#EEEEEE;
+border:2px solid gray;
+border-collapse:collapse;
+border-spacing:0;
+float:left;
+width:100%;
+margin-bottom:10px;
+}
+
+.standardTable tr{
+height:25px;
+}
+
+.standardTable td{
+border:1px dotted #BBBBBB;
+text-align:center
+}
+
+.standardTable_SortHeader {
+background-color:#BBBBBB;
+background-image:url(img/tableBg.jpg);
+border:1px dotted gray;
+padding:4px;
+color:white;
+}
+
+.standardTable_Footer {
+	border-width: 1px 1px 1px 1px;
+	padding: 4px 4px 4px 4px;
+	border-style: dotted dotted dotted dotted;
+	border-color: gray gray gray gray;
+	background-color: #bbbbbb;
+}
+
+/*TABS*/
+.inactiveTab{
+	color:#ffffff;
+	background-image:URL(img/SUMAT_tab_inactive.jpg);
+	background-repeat:repeat;
+	font-weight:bold;
+}
+
+.inactiveTab :hover{
+	background-image:URL(img/SUMAT_tab_inactive_hover.jpg);
+}
+
+
+.activeTab{
+	color:white;
+	background-image:URL(img/SUMAT_tab_active.jpg);
+	background-repeat:repeat;
+	font-weight:bold;
+}
+
+.tabContent{
+	background-image:URL(img/SUMAT_tab_content_bg.jpg);
+	background-repeat:repeat-x;	
+}
+
+.tabHeader{
+	border-bottom:1px solid black;
+}
+
+/*LABELS*/
+
+.labelInput{
+
+}
+
+.labelOutput{
+display:inline;
+margin-left:10px;
+}
+
+
+/*FIELDSET*/
+
+fieldset{
+	float:left;
+	background-color:#fff;
+	border:1px solid black;
+	background-image:URL(img/SUMAT_tab_content_bg.jpg);
+	background-repeat:repeat-x;
+	margin-top:10px;
+	margin-bottom:10px;	
+	display:inline;
+}
+
+legend{
+	background-color:#ddd;
+	border:1px solid black;
+}

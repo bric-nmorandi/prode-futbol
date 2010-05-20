@@ -1,0 +1,36 @@
+/*LOGIN*/
+
+
+#loginform {
+width:300px;
+margin:auto;
+}
+
+#loginform fieldset{
+padding:10px;
+border:none;
+}
+
+#loginform legend{
+font-weight:bold;
+font-size:9pt;
+}
+
+#loginform label{
+display:block;
+height:2em;
+background-color:#E7E7E7;
+padding:10px 10px 0;
+}
+
+#loginform input {
+margin-right:20px;
+border:1px solid #999999;
+float:right;
+clear:right;
+background:#CCCCCC;
+}
+
+#loginform input:focus,#loginform input:hover {
+border:1px solid #333333;
+}

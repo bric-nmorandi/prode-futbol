@@ -1,0 +1,15 @@
+.msg { position:absolute; top:64px; left:0; right:0; bottom:0; background:#ccc; opacity: 0.7; z-index:1000;}
+.msgBox { width:340px; margin:0 auto; left:50%; margin-left:-170px;  position:absolute; top:130px; z-index:1001; background:#999;}
+.msgBox .box { position:relative; top:-3px; left:-3px;}
+
+.msgBox h3 { font-weight:bold; color:#2e4976; background:url(img/h3_error.png); line-height:18px;}
+.msgBox h3 .cerrar { background-position:0pt -51px; top:3px;}
+
+.mTexto { min-height:50px; margin:15px; padding-left:50px; font-size:13px; color:#666; background:url(img/msg_ico.png) no-repeat;}
+.mError .mTexto { background-position:0 -58px;}
+
+.msgPop { width:490px; margin:0 auto; left:50%; margin-left:-245px;  position:absolute; top:130px; z-index:1001; background:#999;}
+.msgPop .box { position:relative; top:-3px; left:-3px;}
+.msgPop .box .box {top:0; left:0;}
+
+.mTextoOk { min-height:50px; margin:15px; padding-left:50px; font-size:13px; color:#666; background:url(img/tick.png) no-repeat;}

@@ -1,0 +1,28 @@
+/*PDA template*/
+
+.pdaBox {
+float:left;
+width:258px;
+border:1px solid #000000;
+margin-top:5px;
+margin-left:5px;
+}
+
+.pdaBox img{
+float:left;
+border-style:none;
+}
+
+.pdaInfo{
+margin-top:18px;
+}
+
+.pdaInfo p{
+margin:2px auto;
+}
+
+.pdaInfo p span{
+font-weight:bold;
+}
+
+

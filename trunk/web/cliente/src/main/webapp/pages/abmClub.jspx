@@ -1,0 +1,36 @@
+<ui:composition template="/includes/template.jspx"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:t="http://myfaces.apache.org/tomahawk"
+	xmlns:a4j="https://ajax4jsf.dev.java.net/ajax"
+	xmlns:jdt="http://www.jenia.org/jsf/dataTools"
+	xmlns:rich="http://richfaces.org/rich">
+
+	<ui:define name="title">
+  	.:: Prode - Gestion de Clubes - PDAs ::.
+	</ui:define>
+
+	<ui:define name="body">	
+		<h:form id="formClub">
+			<t:panelGroup id="panClub">
+				<t:panelGrid columns="2">
+				<h:outputText value="#{clubBean.club.id}" /> 						
+ 						<h:inputText id="nombreClubId" value="#{clubBean.nombre.value}"	maxlength="50" size="30">
+ 						</h:inputText>
+ 						<h:outputText id="estadoClubId" value="#{clubBean.club.estadoClub.descripcion}" />
+				</t:panelGrid>				
+			</t:panelGroup>
+			<h:panelGrid cellpadding="5" cellspacing="0"
+				style="text-align: left; width: 50%" border="0" columns="3">
+				<h:commandButton id="grabarClub" type="submit"
+					value="Guardar" style="width:150px;"
+					action="#{clubBean.saveClub}" />				
+				<h:commandButton id="cancelarClub" value="Cancelar"
+					style="width:150px;" action="#{clubBean.cancel}" immediate="true"
+					onclick="if(! window.confirm('Guardar cambios?') ) {return false}" />
+			</h:panelGrid>
+		</h:form>
+	</ui:define>
+</ui:composition>
