@@ -1,0 +1,10 @@
+1|Ellis Park|johanesburgo|
+2|Green Point|ciudad del cabo|
+3|Loftus Versfeld|tshwane/pretoria|
+4|Peter Mokaba|polokwane|
+5|Free State|mangaung/bloemfontein
+6|Royal Bafokeng|rustenburgo
+7|Nelson Mandela Bay|bahía nelson mandela/puerto elizabeth
+8|Moses Mabhida|durban
+9|Mbombela|nelspruit
+10|Soccer City|johanesburgo

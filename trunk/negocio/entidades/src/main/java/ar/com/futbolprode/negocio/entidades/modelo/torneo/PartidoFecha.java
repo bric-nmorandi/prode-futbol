@@ -7,6 +7,7 @@ import java.util.Date;
 
 import ar.com.futbolprode.commons.auditor.Auditor;
 import ar.com.futbolprode.negocio.entidades.modelo.club.Club;
+import ar.com.futbolprode.negocio.entidades.modelo.liga.Estadio;
 
 /**
  * @author acabrera
@@ -34,7 +35,11 @@ public class PartidoFecha extends Auditor {
 	 * se define a que fecha pertenece el partído.
 	 */
 	private FechaTorneo fechaTorneo;
-
+	/**
+	 * Estadio en el que se jugará el partido.
+	 */
+	private Estadio estadio;
+	
 	public PartidoFecha(Club clubLocal, Club clubVisitante,
 			FechaTorneo fechaTorneo, Date horario) {
 		this.clubLocal = clubLocal;
@@ -43,6 +48,15 @@ public class PartidoFecha extends Auditor {
 		this.horario = horario;
 	}
 
+	public PartidoFecha(Club clubLocal, Club clubVisitante,
+			FechaTorneo fechaTorneo, Date horario,Estadio estadio) {
+		this.clubLocal = clubLocal;
+		this.clubVisitante = clubVisitante;
+		this.fechaTorneo = fechaTorneo;
+		this.horario = horario;
+		this.estadio=estadio;
+	}
+	
 	public PartidoFecha() {
 		// TODO Auto-generated constructor stub
 	}
@@ -85,6 +99,14 @@ public class PartidoFecha extends Auditor {
 
 	public void setFechaTorneo(FechaTorneo fechaTorneo) {
 		this.fechaTorneo = fechaTorneo;
+	}
+
+	public Estadio getEstadio() {
+		return estadio;
+	}
+
+	public void setEstadio(Estadio estadio) {
+		this.estadio = estadio;
 	}
 
 }

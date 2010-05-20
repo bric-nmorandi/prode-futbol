@@ -7,6 +7,14 @@
 
 	<import
 		resource="classpath:ar/com/futbolprode/negocio/logica/dao/spring-dao.xml" />
+	<bean id="estadioService" parent="prodeTransactionProxy">
+		<property name="target">
+			<bean
+				class="ar.com.futbolprode.negocio.logica.service.impl.EstadioServiceImpl">
+				<property name="estadioDao" ref="estadioDao" />
+			</bean>
+		</property>
+	</bean>
 	<bean id="grupoService" parent="prodeTransactionProxy">
 		<property name="target">
 			<bean

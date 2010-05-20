@@ -24,6 +24,8 @@ public class Torneo extends Auditor {
 
 	private EstadoTorneo estadoTorneo;
 
+	private Set<FechaTorneo> fechas;	
+	
 	public Torneo(String nombre, EstadoTorneo estadoTorneo) {
 		this.nombre = nombre;
 		this.estadoTorneo = estadoTorneo;
@@ -58,6 +60,17 @@ public class Torneo extends Auditor {
 
 	public void setEstadoTorneo(EstadoTorneo estadoTorneo) {
 		this.estadoTorneo = estadoTorneo;
+	}
+
+	public Set<FechaTorneo> getFechas() {
+		return fechas;
+	}
+
+	public void setFechas(Set<FechaTorneo> fechas) {
+		if(this.fechas==null){
+			this.fechas=new HashSet<FechaTorneo>();
+		}
+		this.fechas = fechas;
 	}
 
 }

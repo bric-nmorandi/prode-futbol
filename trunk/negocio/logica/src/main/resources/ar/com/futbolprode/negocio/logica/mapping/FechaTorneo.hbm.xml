@@ -10,9 +10,9 @@
   	<property name="fechaCreacion" type="date" access="field" column="fecha_creacion" />
   	<property name="fechaDelTorneo" type="timestamp" access="field" column="fecha_torneo" />
   	<many-to-one name="torneo" access="field" class="Torneo" column="torneo_id"/>
-  	<set name="partidos" access="field" lazy="false" cascade="all">
+  	<set name="partidos" access="field" lazy="false" cascade="all" >
   		<key column="fecha_torneo_id" />
   		<one-to-many class="PartidoFecha"/>
-  	</set>
+  	</set>  	
   </class>
 </hibernate-mapping>

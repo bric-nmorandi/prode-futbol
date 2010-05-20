@@ -51,6 +51,8 @@ public class AbstractTest extends AbstractDependencyInjectionSpringContextTests 
 	 */
 	private GrupoService grupoService;
 	
+	private EstadioService estadioService;
+	
 	@Override
 	protected String[] getConfigLocations() {
 		return new String[] { "classpath:/ar/com/futbolprode/negocio/logica/service/spring-service.xml" };
@@ -131,5 +133,13 @@ public class AbstractTest extends AbstractDependencyInjectionSpringContextTests 
 
 	public void setGrupoService(GrupoService grupoService) {
 		this.grupoService = grupoService;
+	}
+
+	public EstadioService getEstadioService() {
+		return estadioService;
+	}
+
+	public void setEstadioService(EstadioService estadioService) {
+		this.estadioService = estadioService;
 	}
 }

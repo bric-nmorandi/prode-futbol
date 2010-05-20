@@ -10,7 +10,8 @@ import ar.com.futbolprode.commons.auditor.Auditor;
 import ar.com.futbolprode.negocio.entidades.modelo.club.Club;
 
 /**
- * Clase que define a una liga
+ * Clase que define a una liga. La liga esta compuesta por una lista de clubes (
+ * <code>Club</code>)
  * 
  * @author acabrera
  * @since 28 Nov,2009
@@ -36,7 +37,7 @@ public class Liga extends Auditor {
 	public Liga() {
 		// TODO Auto-generated constructor stub
 	}
-	
+
 	public String getDescripcion() {
 		return descripcion;
 	}
@@ -54,6 +55,14 @@ public class Liga extends Auditor {
 			this.clubes = new HashSet<Club>();
 		}
 		this.clubes = clubes;
+	}
+	public Club getClub(int i){
+		for (Club club : clubes) {
+			if(club.getId().intValue()==i){
+				return club;
+			}
+		}
+		return null; 
 	}
 
 }
