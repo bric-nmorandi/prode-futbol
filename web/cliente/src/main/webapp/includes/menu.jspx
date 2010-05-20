@@ -1,0 +1,15 @@
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:t="http://myfaces.apache.org/tomahawk">
+
+	<ui:define name="menu">
+		<h:form id="jscook_action">
+		    <div id="smoothmenu1" class="ddsmoothmenu">
+		            <t:navigationMenuItems id="navitems" value="#{menuBean.itemsMenu}"/>
+		    </div>
+		</h:form>
+	</ui:define>
+	
+</ui:composition>

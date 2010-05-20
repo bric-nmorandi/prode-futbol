@@ -1,0 +1,109 @@
+body{
+font-family:Arial, Helvetica, sans-serif;
+margin:0 auto;
+height:100%;
+}
+
+.maincont{
+background-color:#CCCCCC;
+width:822px;
+height:632px;
+margin:0 auto;
+}
+
+.subcont{
+background-color:#CCCCCC;
+width:800px;
+height:100%px;
+float:left;
+margin:0 auto;
+}
+
+.leftbar{
+background-image:URL(img/SUMAT_left_out.gif);
+float:left;
+height:100%;
+width:11px;
+}
+
+.rightbar{
+background-image:URL(img/SUMAT_right_out.gif);
+float:left;
+height:100%;
+width:11px;
+}
+
+.header{
+background-image:URL(img/SUMAT_header.gif);
+float:left;
+height:93px;
+width:800px;
+}
+
+.menu{
+background-image:URL(img/SUMAT_menu.gif);
+float:left;
+height:21px;
+width:800px;
+}
+
+.bodycont{
+background-image:URL(img/SUMAT_web_bglogo.png);
+background-position:center top;
+background-repeat:no-repeat;
+float:left;
+height:497px;
+width:800px;
+}
+
+.footer{
+background-image:URL(img/SUMAT_footer.gif);
+float:left;
+height:21px;
+width:800px;
+}
+
+.login{
+width:298px;
+height:147px;
+background-color:#aaaaaa;
+margin:160px auto 0;
+border:2px solid #FFFFFF;
+}
+
+/*LOGIN*/
+
+
+#loginform {
+width:300px;
+margin:auto;
+}
+
+#loginform fieldset{
+padding:10px;
+border:none;
+}
+
+#loginform legend{
+font-weight:bold;
+font-size:9pt;
+}
+
+#loginform label{
+display:block;
+height:2em;
+background-color:#E7E7E7;
+padding:10px 10px 0;
+}
+
+#loginform input {
+margin-right:20px;
+border:1px solid #999999;
+float:right;
+clear:right;
+background:#CCCCCC;
+}
+
+#loginform input:focus,#loginform input:hover {
+border:1px solid #333333;
+}
