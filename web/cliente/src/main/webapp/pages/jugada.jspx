@@ -1,0 +1,68 @@
+<ui:composition template="/includes/template.jspx"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:t="http://myfaces.apache.org/tomahawk"
+	xmlns:a4j="https://ajax4jsf.dev.java.net/ajax"
+	xmlns:jdt="http://www.jenia.org/jsf/dataTools"
+	xmlns:rich="http://richfaces.org/rich">
+
+	<ui:define name="title">
+  	.:: Prode - Gestion de Clubes - PDAs ::.
+	</ui:define>
+
+	<ui:define name="body">	
+		<h:form id="formClub">
+			<t:panelGroup id="panClub">
+				<t:panelGrid columns="2">
+				<t:div id="divJugada">
+								<t:dataTable value="#{jugadaBean.jugadas}"
+								var="jugada" renderedIfEmpty="false" styleClass="standardTable"
+								headerClass="standardTable_SortHeader"
+								footerClass="standardTable_Footer"
+								rowClasses="standardTable_Row1,standardTable_Row2">
+								
+								<t:column>
+									<f:facet name="header">
+										<h:outputText value="Id" id="lblListaId" />
+									</f:facet>
+									<h:outputText value="#{jugada.id}" id="clubId" />
+								</t:column>
+								<t:column>
+								<h:commandLink action="#{jugadaBean.modificarJugada}">
+									<f:facet name="header">
+										<h:outputText value="Nombre" id="lblNombreLocal" />
+									</f:facet>
+									<h:outputText value="#{jugada.partidoFecha.clubLocal.nombre}" id="nombreLocal" />
+									<f:param name="paramIdClubLocal" value="#{jugada.partidoFecha.clubLocal.id}" />
+								</h:commandLink>
+								</t:column>
+								
+								<t:column>
+								<h:commandLink action="#{jugadaBean.modificarJugada}">
+									<f:facet name="header">
+										<h:outputText value="Nombre" id="lblNombreVisitante" />
+									</f:facet>
+									<h:outputText value="#{jugada.partidoFecha.clubVisitante.nombre}" id="nombreVisitante" />
+									<f:param name="paramIdClubVisitante" value="#{jugada.partidoFecha.clubVisitante.id}" />
+								</h:commandLink>
+								</t:column>
+								
+								<t:column>
+								
+									<f:facet name="header">
+										<h:outputText value="Horario" id="lblHorario" />
+									</f:facet>
+									<h:outputText value="#{jugada.partidoFecha.horario}" id="partidoHorario" />
+								</t:column>																				
+							</t:dataTable>
+							<h:outputText value="Jugadas" id="LblSinClub"
+								rendered="#{(empty jugadaBean.jugadas)}" />
+								</t:div>
+				
+				</t:panelGrid>				
+			</t:panelGroup>			
+		</h:form>
+	</ui:define>
+</ui:composition>
