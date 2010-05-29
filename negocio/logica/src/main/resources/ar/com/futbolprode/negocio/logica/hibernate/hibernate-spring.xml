@@ -70,6 +70,7 @@
 				<value>ar/com/futbolprode/negocio/logica/mapping/Jugada.hbm.xml</value>
 				<value>ar/com/futbolprode/negocio/logica/mapping/Grupo.hbm.xml</value>
 				<value>ar/com/futbolprode/negocio/logica/mapping/Estadio.hbm.xml</value>
+		<!-- 	<value>ar/com/futbolprode/negocio/logica/mapping/UsuarioJugada.hbm.xml</value>-->
 			</list>
 		</property>
         <property name="entityInterceptor"  ref="auditInterceptor"/>            

@@ -40,6 +40,8 @@ public class Club extends Auditor {
 
 	private Grupo grupo;
 	
+	private String imagen;
+	
 	public Club(String nombre, String descripcion, Liga liga,
 			EstadoClub estadoClub) {
 		this.nombre = nombre;
@@ -110,6 +112,14 @@ public class Club extends Auditor {
 
 	public void setGrupo(Grupo grupo) {
 		this.grupo = grupo;
+	}
+
+	public String getImagen() {
+		return imagen;
+	}
+
+	public void setImagen(String imagen) {
+		this.imagen = imagen;
 	}
 
 }

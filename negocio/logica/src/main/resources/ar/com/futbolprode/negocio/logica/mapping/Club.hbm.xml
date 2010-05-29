@@ -16,6 +16,7 @@
   			<one-to-many class="ar.com.futbolprode.negocio.entidades.modelo.torneo.TorneoClub" />
   	</set>
   	<many-to-one name="liga" class="ar.com.futbolprode.negocio.entidades.modelo.liga.Liga" access="field" column="liga_id"/>
-  	<many-to-one name="grupo" class="ar.com.futbolprode.negocio.entidades.modelo.grupo.Grupo" access="field" column="grupo_id" />  	
+  	<many-to-one name="grupo" class="ar.com.futbolprode.negocio.entidades.modelo.grupo.Grupo" access="field" column="grupo_id" />
+  	<property name="imagen" access="field" column="imagen" type="string" />  	
   </class>
 </hibernate-mapping>

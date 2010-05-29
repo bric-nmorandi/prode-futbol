@@ -29,4 +29,6 @@ public interface JugadaDao {
      * @return
      */
     List<Jugada> getAll();
+    
+//    List<Jugada> getAllForDate(int fecha);
 }

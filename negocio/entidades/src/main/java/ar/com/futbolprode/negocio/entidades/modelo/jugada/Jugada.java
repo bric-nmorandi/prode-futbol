@@ -6,6 +6,7 @@ package ar.com.futbolprode.negocio.entidades.modelo.jugada;
 import ar.com.futbolprode.commons.auditor.Auditor;
 import ar.com.futbolprode.negocio.entidades.modelo.torneo.PartidoFecha;
 import ar.com.futbolprode.negocio.entidades.modelo.torneo.Resultado;
+import ar.com.futbolprode.negocio.entidades.modelo.usuario.Usuario;
 
 /**
  * @author Veronica
@@ -30,6 +31,8 @@ public class Jugada extends Auditor {
 	 */
 	private Resultado resultado;
 
+	private Usuario usuario;
+	
 	public Jugada() {
 		// TODO Auto-generated constructor stub
 	}
@@ -68,6 +71,14 @@ public class Jugada extends Auditor {
 			}
 		}
 		return puntos;
+	}
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 
 }

@@ -28,7 +28,11 @@ public class FechaTorneo extends Auditor {
 	 * @see Torneo
 	 */
 	private Torneo torneo;
-
+	/**
+	 * 
+	 */
+	private boolean estado;
+	
 	public FechaTorneo(Date fechaDelTorneo, Torneo torneo) {
 		this.fechaDelTorneo = fechaDelTorneo;
 		this.torneo = torneo;
@@ -101,5 +105,13 @@ public class FechaTorneo extends Auditor {
 
 	public void setTorneo(Torneo torneo) {
 		this.torneo = torneo;
+	}
+
+	public boolean isEstado() {
+		return estado;
+	}
+
+	public void setEstado(boolean estado) {
+		this.estado = estado;
 	}
 }
