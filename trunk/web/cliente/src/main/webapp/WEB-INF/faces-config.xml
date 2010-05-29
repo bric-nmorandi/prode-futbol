@@ -33,36 +33,18 @@
 	 -->
 	  
 	<managed-bean>
-		<managed-bean-name>listaClubBean</managed-bean-name>
-		<managed-bean-class>ar.com.futbolprode.web.admin.bean.ListaClubBean</managed-bean-class>
+		<managed-bean-name>jugadaBean</managed-bean-name>
+		<managed-bean-class>ar.com.futbolprode.web.cliente.bean.JugadaBean</managed-bean-class>
 		<managed-bean-scope>session</managed-bean-scope>
-	</managed-bean>
-	<managed-bean>
-		<managed-bean-name>clubBean</managed-bean-name>
-		<managed-bean-class>ar.com.futbolprode.web.admin.bean.ClubBean</managed-bean-class>
-		<managed-bean-scope>session</managed-bean-scope>
-		<managed-property>
-			<property-name>club</property-name>
-			<value>#{listaClubBean.clubUpdate}</value>
-		</managed-property>
-		<managed-property>
-			<property-name>clubString</property-name>
-			<value>#{listaClubBean.clubUpdateString}</value>
-		</managed-property>
-	</managed-bean>
-	
+	</managed-bean>	
 
 
 	<navigation-rule>
 		<from-view-id>*</from-view-id>
 		<navigation-case>
-			<from-outcome>listaClub</from-outcome>
-			<to-view-id>/pages/listaClub.jspx</to-view-id>			
-		</navigation-case>
-		<navigation-case>
-			<from-outcome>abmClub</from-outcome>
-			<to-view-id>/pages/abmClub.jspx</to-view-id>			
-		</navigation-case>						
+			<from-outcome>jugada</from-outcome>
+			<to-view-id>/pages/jugada.jspx</to-view-id>			
+		</navigation-case>					
 	</navigation-rule>
 
 </faces-config>

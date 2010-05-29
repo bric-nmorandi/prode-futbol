@@ -4,7 +4,245 @@
                        http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 
 	<display-name>web</display-name>
-	<description>Cliente Prode</description>
+	<description>Admin Prode</description>
+	<context-param>
+		<param-name>org.richfaces.SKIN</param-name>
+		<param-value>blueSky</param-value>
+	</context-param>
+	<context-param>
+		<param-name>javax.faces.DEFAULT_SUFFIX
+		</param-name>
+		<param-value>.jspx</param-value>
+	</context-param>
+	<context-param>
+		<param-name>facelets.REFRESH_PERIOD
+		</param-name>
+		<param-value>2</param-value>
+	</context-param>
+	<context-param>
+		<!--
+			parámetros de contexto para los jsp y etiquetas
+		-->
+		<param-name>javax.servlet.jsp.jstl.fmt.localizationContext
+		</param-name>
+		<param-value>ar.com.futbolprode.web.admin.properties
+		</param-value>
+	</context-param>
+	<context-param>
+		<param-name>javax.faces.STATE_SAVING_METHOD
+		</param-name>
+		<param-value>server</param-value>
+	</context-param>
+	<context-param>
+		<param-name>javax.faces.application.CONFIG_FILES
+		</param-name>
+		<param-value>/WEB-INF/faces-config.xml
+		</param-value>
+	</context-param>
+	<context-param>
+		<param-name>org.apache.myfaces.ALLOW_JAVASCRIPT
+		</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	<context-param>
+		<param-name>org.apache.myfaces.DETECT_JAVASCRIPT
+		</param-name>
+		<param-value>false</param-value>
+	</context-param>
+	<context-param>
+		<param-name>org.apache.myfaces.PRETTY_HTML
+		</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	<context-param>
+		<param-name>org.apache.myfaces.AUTO_SCROLL
+		</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	<context-param>
+		<param-name>facelets.DEVELOPMENT</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	<context-param>
+		<param-name>facelets.SKIP_COMMENTS</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			classpath:/ar/com/futbolprode/negocio/logica/service/spring-service.xml
+	
+		</param-value>
+	</context-param>
+	<context-param>
+		<description>
+			La pagina de error HTTP 500 sea customizada y no la de
+			default
+  </description>
+		<param-name>org.apache.myfaces.ERROR_HANDLING
+		</param-name>
+		<param-value>false</param-value>
+	</context-param>
+	 <context-param>
+	      <param-name>org.jboss.jbossfaces.WAR_BUNDLES_JSF_IMPL</param-name>
+	      <param-value>true</param-value>
+	 </context-param>
+	<!-- Filter -->
+	<filter>
+		<filter-name>extensionsFilter</filter-name>
+		<filter-class>org.apache.myfaces.component.html.util.ExtensionsFilter
+		</filter-class>
+		<init-param>
+			<param-name>uploadMaxFileSize</param-name>
+			<param-value>100m</param-value>
+		</init-param>
+		<init-param>
+			<param-name>uploadThresholdSize</param-name>
+			<param-value>100k</param-value>
+		</init-param>
+	</filter>
+	<filter>
+		<display-name>RichFaces Filter</display-name>
+		<filter-name>richfaces</filter-name>
+		<filter-class>org.ajax4jsf.Filter</filter-class>
+	</filter>
 
+	<!-- Filter Mapping -->
+	<filter-mapping>
+		<filter-name>extensionsFilter</filter-name>
+		<url-pattern>/faces/myFacesExtensionResource/*
+		</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>extensionsFilter</filter-name>
+		<url-pattern>*.faces</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>extensionsFilter</filter-name>
+		<url-pattern>*.jsp</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>extensionsFilter</filter-name>
+		<servlet-name>Faces Servlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>richfaces</filter-name>
+		<servlet-name>Faces Servlet</servlet-name>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+	</filter-mapping>
 
+	<!-- Listener -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener
+		</listener-class>
+	</listener>
+	<listener>
+		<listener-class>
+			org.apache.myfaces.webapp.StartupServletContextListener
+		</listener-class>
+	</listener>
+	<!--  Metro config -->
+	<!-- 
+	<listener>
+        <listener-class>
+                com.sun.xml.ws.transport.http.servlet.WSServletContextListener
+        </listener-class>
+    </listener>
+     -->
+     <!-- Listens to all web app lifecycle events so that @PreDestroy can be called on -->
+   <!-- JSF managed beans that go out of scope.  You can comment this out if you     -->
+   <!-- don't use JSF or you don't use annotations on your managed beans.            -->
+   <!-- cambio realizado para trabajar con jboss -->
+<!-- 
+	   <listener>
+     <listener-class>org.jboss.web.jsf.integration.config.JBossJSFConfigureListener</listener-class>
+   </listener> 
+
+   <listener>
+     <listener-class>com.sun.faces.application.WebappLifecycleListener</listener-class>
+   </listener>
+ -->
+	<!-- Faces Servlet -->
+	<servlet>
+		<servlet-name>Faces Servlet</servlet-name>
+		<servlet-class>javax.faces.webapp.FacesServlet
+		</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>Jenia internal servlet</servlet-name>
+		<servlet-class>org.jenia.faces.util.Servlet
+		</servlet-class>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.jsf</url-pattern>
+	</servlet-mapping>
+	<servlet>  
+        <servlet-name>Resource Servlet</servlet-name>  
+        <servlet-class>  
+         org.primefaces.resource.ResourceServlet  
+        </servlet-class>  
+        <load-on-startup>3</load-on-startup>
+ 	</servlet>
+	<servlet-mapping>
+		<servlet-name>Jenia internal servlet</servlet-name>
+		<url-pattern>/jenia4faces/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>  	
+    	<servlet-name>Resource Servlet</servlet-name>  
+     	<url-pattern>/primefaces_resource/*</url-pattern>  
+ 	</servlet-mapping>
+
+    <!--  Metro config -->
+    <!-- servlet>
+
+        <servlet-name>metroServlet</servlet-name>
+        <servlet-class>
+                com.sun.xml.ws.transport.http.servlet.WSServlet
+        </servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet-->
+        
+    	<!-- Log4j  -->
+    <!-- 
+	<servlet>
+		<description>Servler de inicializacion del Log4j</description>
+		<display-name>Log4jInit</display-name>
+		<servlet-name>Log4jInit</servlet-name>
+		<servlet-class>ar.com.futbolprode.web.admin.log.Log4jInit</servlet-class>
+		<init-param>
+			<param-name>log4j-init-file</param-name>
+			<param-value>src/main/resources/ar/com/futbolprode/web/admin/config/log4j.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+     -->
+    <!-- security-constraint>
+	    <web-resource-collection>
+	        <web-resource-name>restricted web services</web-resource-name>
+	        <url-pattern>/ws/*</url-pattern>
+	        <http-method>GET</http-method>
+	        <http-method>POST</http-method>
+	    </web-resource-collection>
+	    <user-data-constraint>
+	        <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+	    </user-data-constraint>
+	</security-constraint-->
+    
+    <!-- 
+    <filter>
+		<display-name>AuthProviderFilter</display-name>
+		<filter-name>authProviderFilter</filter-name>
+		<filter-class>ve.gob.libertador.sumat.pda.business.remoting.server.auth.AuthenticationFilter</filter-class>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>authProviderFilter</filter-name>
+		<url-pattern>/ws/*</url-pattern>
+	</filter-mapping>
+ 	-->
 </web-app>
