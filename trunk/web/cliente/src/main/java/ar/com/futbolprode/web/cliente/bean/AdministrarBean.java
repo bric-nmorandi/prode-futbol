@@ -7,7 +7,9 @@ import java.util.ResourceBundle;
 
 import ar.com.futbolprode.commons.web.bean.MultipleModeContainerBean;
 import ar.com.futbolprode.negocio.logica.service.ClubService;
+import ar.com.futbolprode.negocio.logica.service.JugadaService;
 import ar.com.futbolprode.negocio.logica.service.TorneoService;
+import ar.com.futbolprode.negocio.logica.service.UsuarioService;
 
 /**
  * @author acabrera administrador General de beans
@@ -38,7 +40,7 @@ public class AdministrarBean extends MultipleModeContainerBean {
 	public ResourceBundle getBundle() {
 		if (bundle == null) {
 			bundle = ResourceBundle
-					.getBundle("ar/com/futbolprode/web/admin/properties/messages");
+					.getBundle("ar/com/futbolprode/web/cliente/properties/messages");
 		}
 
 		return bundle;
@@ -50,5 +52,11 @@ public class AdministrarBean extends MultipleModeContainerBean {
 
 	protected TorneoService getTorneoService() {
 		return (TorneoService) getService("torneoService");
+	}
+	protected JugadaService getJugadaService(){
+		return (JugadaService)getService("jugadaService");
+	}
+	protected UsuarioService getUsuarioService(){
+		return (UsuarioService)getService("usuarioService");
 	}
 }
