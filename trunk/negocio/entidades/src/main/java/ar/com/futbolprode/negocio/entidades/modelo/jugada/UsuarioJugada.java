@@ -10,6 +10,7 @@ import ar.com.futbolprode.negocio.entidades.modelo.usuario.Usuario;
  * @author Veronica
  *
  */
+@Deprecated
 public class UsuarioJugada extends Auditor {
 
 	/**

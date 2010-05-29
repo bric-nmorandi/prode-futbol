@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Set;
 
 import ar.com.futbolprode.commons.auditor.Auditor;
+import ar.com.futbolprode.negocio.entidades.modelo.jugada.Jugada;
 import ar.com.futbolprode.negocio.entidades.modelo.jugada.UsuarioJugada;
 
 /**
@@ -35,7 +36,8 @@ public class Usuario extends Auditor {
 	/**
 	 * 
 	 */
-	protected List<UsuarioJugada> usuarioJugada;
+	protected Set<Jugada> jugadas;
+//	protected Set<UsuarioJugada> usuarioJugada;
 
 	public Usuario() {
 		// TODO Auto-generated constructor stub
@@ -81,18 +83,30 @@ public class Usuario extends Auditor {
 		}
 		this.roles = roles;
 	}
-
-	public List<UsuarioJugada> getUsuarioJugada() {
-		if (this.usuarioJugada == null) {
-			this.usuarioJugada = new ArrayList<UsuarioJugada>();
+//	public Set<UsuarioJugada> getUsuarioJugada() {
+//		if(this.usuarioJugada==null){
+//			this.usuarioJugada=new HashSet<UsuarioJugada>();
+//		}
+//		return usuarioJugada;
+//	}
+//	public void setUsuarioJugada(Set<UsuarioJugada> usuarioJugada) {
+//		if(this.usuarioJugada==null){
+//			this.usuarioJugada=new HashSet<UsuarioJugada>();
+//		}
+//		this.usuarioJugada = usuarioJugada;
+//	}
+	public Set<Jugada> getJugadas() {
+		if(this.jugadas==null){
+			this.jugadas=new HashSet<Jugada>();
 		}
-		return usuarioJugada;
+		return jugadas;
+	}
+	public void setJugadas(Set<Jugada> jugadas) {
+		if(this.jugadas==null){
+			this.jugadas=new HashSet<Jugada>();
+		}
+		this.jugadas = jugadas;
 	}
 
-	public void setUsuarioJugada(List<UsuarioJugada> usuarioJugada) {
-		if (this.usuarioJugada == null) {
-			this.usuarioJugada = new ArrayList<UsuarioJugada>();
-		}
-		this.usuarioJugada = usuarioJugada;
-	}
+
 }

@@ -16,5 +16,9 @@
   		<key column="usuario_id" />
   		<one-to-many class="UsuarioRol"/>
   	</set>
+  	<set name="jugadas" access="field" lazy="false" >
+  		<key column="usuario_id" />
+  		<one-to-many class="ar.com.futbolprode.negocio.entidades.modelo.jugada.Jugada"/>
+  	</set>
   </class>
 </hibernate-mapping>
