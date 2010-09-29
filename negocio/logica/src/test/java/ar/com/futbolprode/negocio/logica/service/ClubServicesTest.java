@@ -3,7 +3,13 @@
  */
 package ar.com.futbolprode.negocio.logica.service;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Random;
+import java.util.StringTokenizer;
 
 import org.apache.commons.lang.math.IntRange;
 import org.apache.commons.lang.math.Range;
@@ -159,5 +165,29 @@ public class ClubServicesTest extends AbstractTest {
 			}
 		}
 		return grupo;
+	}
+	public void testUpdateImagen() throws IOException{
+		File archivoFixture = new File("/home/acabrera/Desktop/prode/equiposMundial2010.txt");
+		BufferedReader linea = new BufferedReader(new FileReader(archivoFixture));	
+		String registro;
+		while((registro=linea.readLine())!=null){
+			StringTokenizer st = new StringTokenizer(registro, "|");
+			int i=0;
+			Club club=null;
+			while(st.hasMoreTokens()){
+				String campo = st.nextToken();
+				if(i==0){
+					club=this.getClubService().getById(Integer.valueOf(campo));
+				}
+				if(i==2){
+					if(club!=null){
+						club.setImagen(campo);
+					}
+					
+				}
+				i++;
+			}
+			this.getClubService().save(club);
+		}
 	}
 }
