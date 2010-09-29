@@ -1,0 +1,74 @@
+# extended LDIF
+#
+# LDAPv3
+# base <dc=prode,dc=com,dc=ar> with scope subtree
+# filter: (objectclass=*)
+# requesting: ALL
+#
+
+# prode.com.ar
+dn: dc=prode,dc=com,dc=ar
+o: prode
+dc: prode
+objectClass: top
+objectClass: dcObject
+objectClass: organization
+description: prode
+
+# People, prode.com.ar
+dn: ou=People,dc=prode,dc=com,dc=ar
+ou: People
+objectClass: organizationalUnit
+
+# Roles, prode.com.ar
+dn: ou=Roles,dc=prode,dc=com,dc=ar
+ou: Roles
+objectClass: organizationalUnit
+
+# acabrera, People, prode.com.ar
+dn: uid=acabrera,ou=People,dc=prode,dc=com,dc=ar
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+sn: acabrera SN
+cn: acabrera CN
+uid: acabrera
+userPassword:: dXNlcjFwd2Q=
+mail: acabrera@prode.org
+
+
+# comun, People, prode.com.ar
+dn: uid=invitado,ou=People,dc=prode,dc=com,dc=ar
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+sn: invitado SN
+cn: invitado CN
+uid: invitado
+mail: invitado@prode.org
+
+
+# role1, Roles, prode.com.ar
+dn: cn=admin,ou=Roles,dc=prode,dc=com,dc=ar
+objectClass: top
+objectClass: groupOfUniqueNames
+cn: admin
+uniqueMember: uid=acabrera,ou=People,dc=prode,dc=com,dc=ar
+
+# role2, Roles, prode.com.ar
+dn: cn=usuarioComun,ou=Roles,dc=prode,dc=com,dc=ar
+objectClass: top
+objectClass: groupOfUniqueNames
+cn: usuarioComun
+uniqueMember: uid=invitado,ou=People,dc=prode,dc=com,dc=ar
+
+
+
+# search result
+#search: 2
+#result: 0 Success
+
+# numResponses: 8
+# numEntries: 7
