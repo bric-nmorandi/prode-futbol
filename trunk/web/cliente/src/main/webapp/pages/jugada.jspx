@@ -35,8 +35,12 @@
 										<h:outputText value="Nombre" id="lblNombreLocal" />
 									</f:facet>
 									<h:outputText value="#{jugada.partidoFecha.clubLocal.nombre}" id="nombreLocal" />
+									
 									<f:param name="paramIdClubLocal" value="#{jugada.partidoFecha.clubLocal.id}" />
 								</h:commandLink>
+								</t:column>
+								<t:column>
+								<h:graphicImage url="/static/styles/img/banderas/#{jugada.partidoFecha.clubLocal.imagen}"></h:graphicImage>
 								</t:column>
 								
 								<t:column>
@@ -45,16 +49,19 @@
 										<h:outputText value="Nombre" id="lblNombreVisitante" />
 									</f:facet>
 									<h:outputText value="#{jugada.partidoFecha.clubVisitante.nombre}" id="nombreVisitante" />
+									
 									<f:param name="paramIdClubVisitante" value="#{jugada.partidoFecha.clubVisitante.id}" />
 								</h:commandLink>
 								</t:column>
-								
 								<t:column>
-								
+									<h:graphicImage url="/static/styles/img/banderas/#{jugada.partidoFecha.clubVisitante.imagen}"></h:graphicImage>
+								</t:column>								
+								<t:column>								
 									<f:facet name="header">
 										<h:outputText value="Horario" id="lblHorario" />
 									</f:facet>
 									<h:outputText value="#{jugada.partidoFecha.horario}" id="partidoHorario" />
+																		
 								</t:column>																				
 							</t:dataTable>
 							<h:outputText value="Jugadas" id="LblSinClub"
