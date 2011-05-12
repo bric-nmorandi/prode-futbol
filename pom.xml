@@ -55,9 +55,12 @@
 	<properties>
    		<maven.compile.target>1.5</maven.compile.target>
 	     	<maven.compile.source>1.5</maven.compile.source>
+		<!--
 		<spring.version>2.5.6</spring.version>
-		<spring.security.version>2.0.4</spring.security.version>
-		<spring.ldap.version>1.2.1</spring.ldap.version>
+		-->
+	        <springsecurity.version>3.0.5.RELEASE</springsecurity.version>
+	        <spring.version>3.0.3.RELEASE</spring.version>
+			<spring.ldap.version>1.2.1</spring.ldap.version>
 	        <axis2.version>1.4.1</axis2.version>
 	        <commons.version>3.0</commons.version>	
 	        <jetty.version>6.1.9</jetty.version>
